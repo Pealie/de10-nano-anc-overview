@@ -16,13 +16,19 @@ The private source identifiers support provenance for authorised readers. Every 
 | --- | --- |
 | Four `stage10.csv` / `stage60.csv` files | Byte-for-byte extraction from each original return archive's `target.zip`; member hashes match the retained source reviews |
 | Two `review.json` files | Byte-for-byte copies of the run-specific `TIM035_RIGHT_SUSTAIN_*_REVIEW.json` files at the research milestone |
-| `docs/images/anc-bench-2026-11-07.jpg` | Byte-for-byte copy from the photograph source revision; source Git blob `eb806ec35bec3011225e5ceea18a1a52d649ed14` |
+| `docs/images/anc-bench-2026-11-07.jpg` | Resized JPEG derivative, 1152 × 864 pixels, from the photograph source revision; original source Git blob `eb806ec35bec3011225e5ceea18a1a52d649ed14` |
 | `LICENSE` | Byte-for-byte copy of the source root licence; source Git blob `f288702d2fa16d3cdf0035b15a9fcbc552cd88e7` |
 | Overview, architecture, results and explanatory text | Newly composed from the dated source records; selective summary rather than a copy of the development README |
 | `tools/verify_results.py` | New standard-library implementation of the matching source scoring and command-replay algorithms; compares all span metrics against the retained reports |
 | Run source-start timestamps | Selected fields from each archived `target.zip/board.json`; complete board inventory files are excluded |
 
 The source reports are preserved as historical records, including their verdicts and proposed next settings. A proposed experiment in one report does not establish that it subsequently succeeded.
+
+## Photograph derivative
+
+On 8 November 2026, the overview photograph was reduced from **1536 × 1152** to **1152 × 864 pixels**, retaining 75% of each original dimension and the complete frame. ImageMagick 7.1.1-43 applied Lanczos downsampling and progressive JPEG encoding at quality 90 with 4:2:0 sampling. EXIF metadata was removed; the source ICC colour profile was preserved. No crop or scene alteration was applied.
+
+The file size fell from **624,231** to **245,230 bytes**. The original remains identified by the pinned source revision and Git blob above. The derivative's SHA-256 and transformation details are recorded in [evidence/manifest.json](../evidence/manifest.json).
 
 ## Original archive identities
 
@@ -61,6 +67,6 @@ The new verifier substitutes Python standard-library arithmetic for NumPy. It ch
 
 [evidence/manifest.json](../evidence/manifest.json) records SHA-256 hashes for the published files other than the manifest itself. Self-exclusion avoids a recursive hash. The Git commit identifies the complete publication, including the manifest. Hashes protect against unnoticed changes within the selected snapshot; they are not an external signature or proof of measurement accuracy.
 
-The publication excludes credentials, host configuration, controller binaries, programming images, raw audio recordings, the complete board inventories and the development Git history. The photograph retains its source bytes; its EXIF was checked for the absence of a GPS-location directory. Numeric logs and retained review reports were reviewed for private contact details and credentials before publication.
+The publication excludes credentials, host configuration, controller binaries, programming images, raw audio recordings, the complete board inventories and the development Git history. The published photograph is a resized JPEG derivative with EXIF metadata removed and its original ICC colour profile retained. Numeric logs and retained review reports were reviewed for private contact details and credentials before publication.
 
 Future updates should add dated evidence and revise the README, results and manifest together. Existing raw records and their original verdicts remain preserved. [Update procedure](../CONTRIBUTING.md)

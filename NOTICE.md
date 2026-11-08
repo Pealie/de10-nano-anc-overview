@@ -12,7 +12,7 @@ This licence choice applies to the material included here. It does not relicense
 
 - Project and overview: Neil Thomson.
 - Independent adviser: Bruce W. Thomson.
-- Bench photograph: supplied by Neil Thomson; taken 7 November 2026 and copied from the source repository without pixel changes.
+- Bench photograph: supplied by Neil Thomson; taken 7 November 2026. The overview uses a resized 1152 × 864 pixel JPEG; the original source identity and transformation are recorded in [docs/provenance.md](docs/provenance.md).
 - Original measurement records and review reports: selected from Neil Thomson's `Pealie/active_noise_cancellation` project at the source identities recorded in [docs/provenance.md](docs/provenance.md).
 - Offline verifier: prepared for this overview from the published-record format and the source project's `tim035_right_sustain_score.py` and `tim035_right_iq_score.py` algorithms. It uses Python's standard library and retains the project licence.
 
