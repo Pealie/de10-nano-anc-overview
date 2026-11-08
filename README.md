@@ -2,7 +2,7 @@
 
 Independent engineering and research into adaptive control of low-frequency sound, combining FPGA signal processing, embedded Linux and acoustic experiments.
 
-**Demonstrated:** two continuous 60-second adaptive-feedback runs while an external tone changed in level, phase and frequency around 200 Hz. Local target-tone RMS amplitude fell by **23.07%** and **22.62%** against the conservative reference. **The declared sustained attenuation target remains open.**
+**Demonstrated:** two continuous 60-second adaptive-feedback runs while an external tone changed in level, phase and frequency around 200 Hz. Local target-tone RMS amplitude fell by **23.07%** and **22.62%** against the conservative reference. **Next milestone:** at least 3 dB mean attenuation, with 54 of 60 one-second intervals reaching 3 dB.
 
 *Evidence snapshot: 5 November 2026. Overview prepared: 8 November 2026.*
 
@@ -10,7 +10,7 @@ Independent engineering and research into adaptive control of low-frequency soun
   <img src="docs/images/anc-bench-2026-11-07.jpg" alt="Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop." width="75%">
 </p>
 
-*Bench photograph, 7 November 2026. The laptop supplies the acoustic disturbance. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph illustrates the later bench arrangement, rather than documenting the exact geometry of either 5 November run.*
+*Bench photograph, 7 November 2026. The laptop supplies the acoustic disturbance. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph shows the later bench arrangement, recorded two days after the reported runs.*
 
 ## Measured result
 
@@ -21,7 +21,7 @@ Independent engineering and research into adaptive control of low-frequency soun
 
 Both runs maintained feedback throughout the programmed source changes and ended disarmed. Separate software replays checked the applied feedback commands and watchdog renewals. The selected original measurements and offline replay are included here.
 
-The sustained target requires **at least 3 dB mean attenuation and 54 of 60 one-second intervals reaching 3 dB**, with the control measurements within the permitted drift. Three decibels corresponds to approximately 29% RMS amplitude reduction. Neither run met the full target.
+The sustained target requires **at least 3 dB mean attenuation and 54 of 60 one-second intervals reaching 3 dB**, with the control measurements within the permitted drift. Three decibels corresponds to approximately 29% RMS amplitude reduction. These criteria govern the next physical comparison.
 
 ## System and engineering work
 
@@ -31,13 +31,13 @@ The work spans FPGA audio acquisition, coherent I/Q measurement, embedded contro
 
 ## Scope and next milestone
 
-The percentages describe the measured tone at one microphone position. They do not establish perceived loudness reduction, room-wide cancellation or broadband performance. Timing, calibrated acoustic output, repeatability and wider operating conditions remain qualification tasks.
+The reported percentages quantify target-tone RMS amplitude reduction at the RIGHT microphone position. Assessments of perceived loudness, spatial coverage and broadband performance require dedicated measurements. Qualification priorities include timing, calibrated acoustic output, repeatability and wider operating conditions.
 
-The next experiment starts with diagnosis of the last attempt's preflight stop and verified progress/timeout handling, followed by a bounded comparison under the unchanged attenuation criteria. That stopped attempt produced no new physical attenuation result.
+The next experiment covers diagnosis of the recorded preflight stop, verification of progress reporting and timeout handling, and a bounded attenuation comparison against the stated criteria.
 
 ## Explore the evidence
 
-- [Results, reference calculation and limitations](docs/results.md)
+- [Results, reference calculation and measurement scope](docs/results.md)
 - [Original data and offline verification](evidence/README.md)
 - [Source identities and publication scope](docs/provenance.md)
 - [Licence and attribution](NOTICE.md)
