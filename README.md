@@ -12,7 +12,7 @@ Independent engineering and research into adaptive control of low-frequency soun
   <img src="docs/images/anc-bench-2026-11-07.jpg" alt="Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop." width="75%">
 </p>
 
-*Bench photograph, 7 November 2026. The laptop supplies the acoustic disturbance. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph shows the later bench arrangement, recorded two days after the reported runs.*
+*Bench photograph, 7 November 2026. The laptop generates the external test tone. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph shows the later bench arrangement, recorded two days after the reported runs.*
 
 ## Experimental results
 
