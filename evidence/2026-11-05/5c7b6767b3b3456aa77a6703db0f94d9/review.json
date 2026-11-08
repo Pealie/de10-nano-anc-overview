@@ -1,0 +1,301 @@
+{
+  "status": "INDEPENDENT_REPLAY_PASS_ORIGINAL_VERDICT_UNCHANGED",
+  "date": "2026-11-05",
+  "archive_filename": "TIM035_RIGHT_SUSTAIN_5c7b6767b3b3456aa77a6703db0f94d9.zip",
+  "archive_bytes": 756058,
+  "archive_sha256": "A55B6CB8A5C0493066D3F73D439CE372FCD720243540C76D8B7543AF6248BBF9",
+  "archive_git_blob": "c78eed63abe84841eff4b23d702f855df7bf17b3",
+  "source_commit": "1b487fe62c1ecef2e7a2e0dba12bf10baf28cf9c",
+  "replay_source": "tools/tim035_right_sustain_score.py at source_commit (mu 0.16, gain cap 96)",
+  "source_bundle_sha256": "9EDDDFCDB0B0C948FF0358B188D89DB586DAF6DE229FFFBDA3E0D4FE72255EE5",
+  "controller_sha256": "663B13F73F1A9E4FAD87665C4515031A21D0CA8EE3F0C0304ADCFBEAA2EF22AF",
+  "original_custody": {
+    "run": "5c7b6767b3b3456aa77a6703db0f94d9",
+    "error_microphone": "RIGHT",
+    "model_archive_sha256": "319ACAB5CCDB7DD268D712AFD62307FBDD8BF3EE52C9FD9041CBCB6561790F99",
+    "source_events": [
+      {
+        "source_second": 38,
+        "amplitude_factor": 0.8,
+        "phase_step_deg": 30
+      },
+      {
+        "source_second": 53,
+        "frequency_hz": 200.1
+      },
+      {
+        "source_second": 68,
+        "amplitude_factor": 1.0,
+        "phase_step_deg": -30
+      },
+      {
+        "source_second": 83,
+        "frequency_hz": 200.0
+      }
+    ],
+    "playback": {
+      "start_ns": 306487482413500,
+      "end_ns": 306588020900800
+    },
+    "wav_sha256": "6BC99102D761E8232905B2B6C20D7AF1AE39ACB14E73DC4C784C33D34C8053E9",
+    "source_sha256": "9EDDDFCDB0B0C948FF0358B188D89DB586DAF6DE229FFFBDA3E0D4FE72255EE5",
+    "target": {
+      "kind": "ready_off",
+      "run": "5c7b6767b3b3456aa77a6703db0f94d9",
+      "boot": "4c71584c-2b6c-49c0-b409-c1ef6758780d",
+      "controller": "663B13F73F1A9E4FAD87665C4515031A21D0CA8EE3F0C0304ADCFBEAA2EF22AF",
+      "fixture_count": 24
+    },
+    "off_start": "OFF",
+    "on": "ON",
+    "stage10_decision": {
+      "seconds": 10,
+      "active_seconds": 10.00049987,
+      "initial_ack": 4068,
+      "final_ack": 4568,
+      "feedback_commands_replayed": 500,
+      "watchdog_renewals_verified": 50,
+      "before_5s_rms": 86656.11198838775,
+      "after_5s_rms": 87771.11227391391,
+      "control_drift_db": 0.1110480475080384,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 86656.11198838775,
+      "active_rms": 56244.462127644176,
+      "reduction_db": 3.7543886332195338,
+      "rms_reduction_percent": 35.094639215776105,
+      "seconds_at_least_3db_reduction": 6,
+      "fraction_seconds_at_least_3db_reduction": 0.6,
+      "per_second_rms": [
+        67588.63500471067,
+        46197.7878197647,
+        63967.389997716804,
+        40129.12631044937,
+        62978.873046601904,
+        49934.09210489363,
+        54295.720168904656,
+        57017.83706104608,
+        48988.32809292434,
+        64584.01498668227
+      ],
+      "extension_eligible": true,
+      "attenuation_demonstrated": true,
+      "source_level_conservative_power_factor": 1.0,
+      "all_recorded_live_checks_passed": true
+    },
+    "off_end": "OFF",
+    "fixed": "YES",
+    "audible": "YES"
+  },
+  "original_finding": "SUSTAINED_RIGHT_ADAPTIVE_TRACKING_COMPLETE",
+  "recomputed": {
+    "finding": "SUSTAINED_RIGHT_ADAPTIVE_TRACKING_COMPLETE",
+    "error_microphone": "RIGHT",
+    "stage10": {
+      "seconds": 10,
+      "active_seconds": 10.00049987,
+      "initial_ack": 4068,
+      "final_ack": 4568,
+      "feedback_commands_replayed": 500,
+      "watchdog_renewals_verified": 50,
+      "before_5s_rms": 86656.11198838775,
+      "after_5s_rms": 87771.11227391391,
+      "control_drift_db": 0.11104804750803839,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 86656.11198838775,
+      "active_rms": 56244.462127644176,
+      "reduction_db": 3.754388633219534,
+      "rms_reduction_percent": 35.094639215776105,
+      "seconds_at_least_3db_reduction": 6,
+      "fraction_seconds_at_least_3db_reduction": 0.6,
+      "per_second_rms": [
+        67588.63500471067,
+        46197.7878197647,
+        63967.389997716804,
+        40129.12631044937,
+        62978.873046601904,
+        49934.09210489363,
+        54295.720168904656,
+        57017.83706104608,
+        48988.32809292434,
+        64584.01498668227
+      ],
+      "extension_eligible": true,
+      "attenuation_demonstrated": true,
+      "source_level_conservative_power_factor": 1.0,
+      "all_recorded_live_checks_passed": true
+    },
+    "stage60": {
+      "seconds": 60,
+      "active_seconds": 60.00347264,
+      "initial_ack": 4568,
+      "final_ack": 7568,
+      "feedback_commands_replayed": 3000,
+      "watchdog_renewals_verified": 300,
+      "before_5s_rms": 91508.02892784873,
+      "after_5s_rms": 98918.01764077159,
+      "control_drift_db": 0.6763240706072238,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 73206.42314227899,
+      "active_rms": 56648.345227026126,
+      "reduction_db": 2.227239194443925,
+      "rms_reduction_percent": 22.618340310209827,
+      "seconds_at_least_3db_reduction": 22,
+      "fraction_seconds_at_least_3db_reduction": 0.36666666666666664,
+      "per_second_rms": [
+        46707.794820350915,
+        63070.91631108589,
+        44686.946278975025,
+        61057.70358783566,
+        49962.85558072117,
+        54860.557810142614,
+        57124.78376134128,
+        51455.022483913075,
+        62374.09176444977,
+        47105.059643524495,
+        55591.76447964213,
+        45065.26836556063,
+        66102.3726152095,
+        42221.790443324404,
+        65767.55437493476,
+        44470.35278227507,
+        67093.80368975962,
+        45748.22926584154,
+        59809.999682661764,
+        51645.795721626746,
+        54669.96146623848,
+        60733.362060073705,
+        45621.14565396182,
+        66310.48359241546,
+        41847.92997915189,
+        60947.92472955909,
+        54152.33097272914,
+        55075.65019007946,
+        59361.948918309616,
+        50107.28365617119,
+        66649.90018342114,
+        46079.99430837639,
+        62138.43714111258,
+        50092.49690402745,
+        64490.930841165566,
+        53538.020971642196,
+        56526.077070499065,
+        60019.278629786946,
+        52442.1097737305,
+        65597.9000246197,
+        53980.282721564174,
+        68488.06803743262,
+        48293.549479821835,
+        68029.76472927126,
+        47391.66612454135,
+        68635.39835157948,
+        46848.05068431343,
+        67078.16248422433,
+        50243.808414967905,
+        59924.80393242851,
+        55535.411478803326,
+        55560.38626287618,
+        64015.092528715446,
+        50956.74386948209,
+        68025.03991781261,
+        46988.33186100567,
+        59339.96498263207,
+        59253.57681575012,
+        48894.41544716533,
+        69473.3893082812
+      ],
+      "extension_eligible": false,
+      "attenuation_demonstrated": false,
+      "source_level_conservative_power_factor": 0.64,
+      "all_recorded_live_checks_passed": true
+    },
+    "source_changes_inside_continuous_60s_interval": true,
+    "active_source_relative_seconds": [
+      28.55861402,
+      88.56208666
+    ],
+    "source_changes": [
+      {
+        "source_second": 38,
+        "amplitude_factor": 0.8,
+        "phase_step_deg": 30
+      },
+      {
+        "source_second": 53,
+        "frequency_hz": 200.1
+      },
+      {
+        "source_second": 68,
+        "amplitude_factor": 1.0,
+        "phase_step_deg": -30
+      },
+      {
+        "source_second": 83,
+        "frequency_hz": 200.0
+      }
+    ],
+    "sustained_feedback_operation_demonstrated": true,
+    "sustained_local_200hz_iq_attenuation_demonstrated": false,
+    "scope": "RIGHT microphone 200 Hz complex I/Q; independent broadband acoustic validation and spatial performance remain separate."
+  },
+  "all_discrete_fields_exact": true,
+  "float_comparison": {
+    "relative_and_absolute_tolerance": 2e-12,
+    "changed_fields": 2,
+    "max_absolute_difference": 4.440892098500626e-16
+  },
+  "independent_diagnostics": {
+    "10": {
+      "command_gain_min": 5,
+      "command_gain_max": 96,
+      "fraction_at_96_count_cap": 0.546,
+      "max_complex_command_step": 7.8090592370738445,
+      "left_active_peak": 56747,
+      "right_active_peak": 77033,
+      "dominant_complex_residual_frequency_offset_hz": -0.4
+    },
+    "60": {
+      "command_gain_min": 6,
+      "command_gain_max": 96,
+      "fraction_at_96_count_cap": 0.5173333333333333,
+      "max_complex_command_step": 7.787529398770161,
+      "left_active_peak": 131183,
+      "right_active_peak": 112649,
+      "dominant_complex_residual_frequency_offset_hz": -0.43333333333333335
+    }
+  },
+  "source_off_ambient": {
+    "iq_rms": 54345.96313628088,
+    "dominant_offset_hz": -0.5,
+    "dominant_component_amplitude": 50244.880027064726,
+    "frequency_resolution_hz": 0.5,
+    "interpretation": "A nearby component is present before laptop playback. Its physical origin is not identified."
+  },
+  "outer_member_sha256": {
+    "controlled_200Hz_100s.wav": "6BC99102D761E8232905B2B6C20D7AF1AE39ACB14E73DC4C784C33D34C8053E9",
+    "custody.json": "18723233E0F7250CAC859F3FB92AD0DCFCA4BBA918F9B040E6F425386828CE26",
+    "result.json": "9336A855C39CC95D04A0B9DCE5100C5C450DE21A7617AEBE80F97BC4063FD48A",
+    "stage10_result.json": "2654D6ECCA3B81BCE6469C5A79BEE0F978B66BDCD17160F34A6A17D1915AB0AB",
+    "stage10_target.zip": "655719DD1FFFEB4CA9CC287A096364640D4F6F2AA2FA85170934DD99C4EB7F73",
+    "target.zip": "F5CA74F068343C61C31C045D7DC9B56181ACC9A3ECC93B9D8D519E40756FE6A1"
+  },
+  "target_member_sha256": {
+    "ambient.csv": "91BEAE3F97F0E813860B21BC2C696214D9DE1B1A1A03968ACB3E10465ABD39B6",
+    "ambient.stderr": "A65D6BA57631941C15BD0A608C8297DDA6CDF4DFD6EAE54FB9133FB94753BB36",
+    "board.json": "F3E1F96E9285BB8D755CB7D687768AB720BFD64C8CB789A7F2BC338581EC3B29",
+    "build.log": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "off.csv": "C442156DBDEBEF2AB9D12812EB009C7C09D71CDDBBD44378A1C7DCBFFB08E301",
+    "off.stderr": "B34D5BC55FB70999E74E05613CD4C975E55056C439A0FB5919F28255F5ADC6E4",
+    "preflight.log": "450A1C6D98ADF68261E9C717855BDE995819A56FB3A27FCF9AC8C6C2B61EEBD1",
+    "stage10.csv": "2CC1FA188F44F3FFB2C6437D559C3F9C18DEB97875AB3B5C8E69FF4E1BB318D3",
+    "stage10.stderr": "D49CEC4AA2DE89C98C2E3E4757D8777B0CBF9BC9765C5E7BEED5FEAC8167D9C8",
+    "stage60.csv": "6BAA9501E060B3C2AC5F82BF079315D2C7B42960EE6E446669249DDD5FCEE11F",
+    "stage60.stderr": "78267D9D059077487CEA863814D6673E9286A7BF8D07489CFFE9CF564FDAE9DC"
+  },
+  "comparison_to_previous": {
+    "previous_archive_sha256": "8C6DB4E0EF800E4E345E49A21280E530B73C6861D40C3C81C024A2CDFDA5832B",
+    "previous_rms_reduction_percent": 23.071307333330758,
+    "current_rms_reduction_percent": 22.618340310209827,
+    "finding": "No demonstrated improvement; unreplicated runs with different background components are not a controlled causal comparison."
+  },
+  "interpretation": "60 s continuous feedback and programmed source chronology verified; declared 60 s attenuation criterion not met. 10 s attenuation criterion met. Historical HOLDs did not block the run. No current protection was bypassed."
+}

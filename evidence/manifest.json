@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "overview_date": "2026-11-08",
+  "experimental_closeout_date": "2026-11-05",
+  "timezone": "Europe/London",
+  "scope": "Selected original records and offline consistency replay; local RIGHT target-tone I/Q only.",
+  "source_repository": "Pealie/active_noise_cancellation",
+  "source_repository_visibility_at_export": "private",
+  "research_milestone_commit": "c14634648633aa681fce9d8195fe0e75c904c58c",
+  "photo_source_commit": "4ee3f48f5b7e90a78feb532ce30c4b6e7a3b0c30",
+  "photo_source_git_blob": "eb806ec35bec3011225e5ceea18a1a52d649ed14",
+  "calibration_complex": [
+    -302.87207031250017,
+    1879.4453125
+  ],
+  "calibration_source_git_blob": "2f70bcfa5edf0ba9d613f16a549660fba7cade56",
+  "sustained_acceptance": {
+    "control_drift_abs_db_max": 1.5,
+    "mean_reduction_db_min": 3,
+    "seconds_meeting_3db_min": 54,
+    "total_seconds": 60,
+    "conservative_reference_power_factor": 0.64
+  },
+  "runs": [
+    {
+      "label": "A",
+      "run": "3b5ff096e5a4471eb1f530e561d75fdf",
+      "source_commit": "fda45dee428c29ec1c013ddbe4ab27414e30d705",
+      "correction_rate": 0.08,
+      "max_gain": 64,
+      "sustained_scorer_source_git_blob": "3be36a8715e9867cb4c8dd64464af7cacfb013ab",
+      "original_archive_filename": "TIM035_RIGHT_SUSTAIN_3b5ff096e5a4471eb1f530e561d75fdf.zip",
+      "original_archive_bytes": 754650,
+      "original_archive_sha256": "8c6db4e0ef800e4e345e49a21280e530b73c6861d40c3c81c024a2cdfda5832b",
+      "source_go_monotonic_ns": 46631452489450,
+      "selected_timestamp_source": "Original archive / target.zip / board.json / source_go_monotonic_ns",
+      "files": {
+        "stage10": "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage10.csv",
+        "stage60": "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage60.csv",
+        "review": "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/review.json"
+      }
+    },
+    {
+      "label": "B",
+      "run": "5c7b6767b3b3456aa77a6703db0f94d9",
+      "source_commit": "1b487fe62c1ecef2e7a2e0dba12bf10baf28cf9c",
+      "correction_rate": 0.16,
+      "max_gain": 96,
+      "sustained_scorer_source_git_blob": "0283cdeb58c5d4e5c2591195c27e3870d0c74f1a",
+      "original_archive_filename": "TIM035_RIGHT_SUSTAIN_5c7b6767b3b3456aa77a6703db0f94d9.zip",
+      "original_archive_bytes": 756058,
+      "original_archive_sha256": "a55b6cb8a5c0493066d3f73d439ce372fcd720243540c76d8b7543af6248bbf9",
+      "source_go_monotonic_ns": 48231396743310,
+      "selected_timestamp_source": "Original archive / target.zip / board.json / source_go_monotonic_ns",
+      "files": {
+        "stage10": "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/stage10.csv",
+        "stage60": "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/stage60.csv",
+        "review": "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/review.json"
+      }
+    }
+  ],
+  "published_file_sha256": {
+    ".gitattributes": "89cc24746d82a0502f74d255ce3695012deebbdb507931184a62540689993428",
+    ".github/workflows/verify-evidence.yml": "4408a0c3e80c288590fb9d284aeb17fde876f81d6fbf3ae2dde36bc4009699b1",
+    ".gitignore": "f2c7e864eb342698716cca386b8691f82ffd7b6631f61cbe0e48a782c6d97048",
+    "CITATION.cff": "ba18db86000f93f2c50d8877f2aed081f59a00224bbf7d125291520294dba0f8",
+    "CONTRIBUTING.md": "3f5fd72dbd99fd0c2465df2d1f03f80bae4cd5c281b20f8169945433e60f78ac",
+    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "NOTICE.md": "cca1e4065031fb1e1e2e78d0451a256cd226caf06890205cdc351b619393b91d",
+    "README.md": "e406a8d354d344d1a46fa1167540a4a062873686926c3bfbb9f2fb6521e14a22",
+    "docs/images/anc-bench-2026-11-07.jpg": "15c608b280b66cb8585cd8fec0fc3691890be0c5adcab77230ec940cbd7f3425",
+    "docs/provenance.md": "058c053c720cd934165706d228f9dc87b2a3f7c938da64ca1fa0798a1cc0798b",
+    "docs/results.md": "3cf2e0e0d9db1f08d36fe5f08e671daf654e10e8b1b84922ea26f76786273281",
+    "docs/system-overview.md": "267648d6c33b4cbe775043faba227b4b89dfb6def8cca909ca9e3ae6ac8f4cff",
+    "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/review.json": "ecf35bd9698b82565d17d5795892a130c0b8f7b8d11be192ca180623d5ffb640",
+    "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage10.csv": "3ae95da4aa32d92059fd5def0ffbb66db53ae67e9b6a11f53b28e540b71e3568",
+    "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage60.csv": "07eb89b2fe4c819ee6a10ee3bccd8445ede69503d76f11eb5f7c28b6027a952b",
+    "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/review.json": "3a1baddfec497011d155919707dd30bbfd25541e0ef57228be41057c3c1bb3c8",
+    "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/stage10.csv": "2cc1fa188f44f3ffb2c6437d559c3f9c18deb97875ab3b5c8e69ff4e1bb318d3",
+    "evidence/2026-11-05/5c7b6767b3b3456aa77a6703db0f94d9/stage60.csv": "6baa9501e060b3c2ac5f82bf079315d2c7b42960ee6e446669249ddd5fcee11f",
+    "evidence/README.md": "a306978ea431c037f9ecfd2e9e18352df382c72c90d66fbdb641e9528851caaa",
+    "tools/verify_results.py": "1d233322a9ec9aa7e06483e8fdfef8a8e8893243e75bcb9ad400bbc4573065c7"
+  }
+}

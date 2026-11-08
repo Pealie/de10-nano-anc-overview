@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite this dated overview when referring to its selected experimental results."
+title: "DE10-Nano active noise cancellation: public overview and selected evidence"
+type: software
+authors:
+  - family-names: Thomson
+    given-names: Neil
+version: "2026.11.08"
+date-released: 2026-11-08
+license: GPL-3.0-only
+repository-code: "https://github.com/Pealie/de10-nano-anc-overview"
+url: "https://github.com/Pealie/de10-nano-anc-overview"
+abstract: "Selected records and offline replay for two sustained adaptive-feedback experiments around 200 Hz. Local target-tone RMS reduction was approximately 23%; the declared sustained attenuation criterion remained unmet."
+keywords:
+  - active noise cancellation
+  - FPGA
+  - DE10-Nano
+  - digital signal processing
+  - adaptive feedback
+  - reproducible measurements

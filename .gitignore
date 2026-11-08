@@ -1,0 +1,42 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+_private/
+local/
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Temporary exports, recordings and build products
+build/
+dist/
+tmp/
+recordings/
+db/
+incremental_db/
+output_files/
+*.rbf
+*.sof
+*.pof
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Selected evidence CSVs, JSON records and images are intentionally tracked.

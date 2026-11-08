@@ -1,0 +1,294 @@
+{
+  "status": "INDEPENDENT_REPLAY_PASS_ORIGINAL_VERDICT_UNCHANGED",
+  "archive_filename": "TIM035_RIGHT_SUSTAIN_3b5ff096e5a4471eb1f530e561d75fdf.zip",
+  "archive_bytes": 754650,
+  "archive_sha256": "8C6DB4E0EF800E4E345E49A21280E530B73C6861D40C3C81C024A2CDFDA5832B",
+  "source_commit": "fda45dee428c29ec1c013ddbe4ab27414e30d705",
+  "replay_source": "tools/tim035_right_sustain_score.py at source_commit (mu 0.08, gain cap 64)",
+  "source_bundle_sha256": "D4A68CD387A863D94DF74A19FA6092B8A79DF10C43647083B1BF487C5E80A8C2",
+  "controller_sha256": "2E9E1F9A92852EA93377FB5E2E9B8F95D305AC4346A2ECA78C49219FBCFF34BD",
+  "original_custody": {
+    "run": "3b5ff096e5a4471eb1f530e561d75fdf",
+    "error_microphone": "RIGHT",
+    "model_archive_sha256": "319ACAB5CCDB7DD268D712AFD62307FBDD8BF3EE52C9FD9041CBCB6561790F99",
+    "source_events": [
+      {
+        "source_second": 38,
+        "amplitude_factor": 0.8,
+        "phase_step_deg": 30
+      },
+      {
+        "source_second": 53,
+        "frequency_hz": 200.1
+      },
+      {
+        "source_second": 68,
+        "amplitude_factor": 1.0,
+        "phase_step_deg": -30
+      },
+      {
+        "source_second": 83,
+        "frequency_hz": 200.0
+      }
+    ],
+    "playback": {
+      "start_ns": 304887431688300,
+      "end_ns": 304988111004800
+    },
+    "wav_sha256": "6BC99102D761E8232905B2B6C20D7AF1AE39ACB14E73DC4C784C33D34C8053E9",
+    "source_sha256": "D4A68CD387A863D94DF74A19FA6092B8A79DF10C43647083B1BF487C5E80A8C2",
+    "target": {
+      "kind": "ready_off",
+      "run": "3b5ff096e5a4471eb1f530e561d75fdf",
+      "boot": "4c71584c-2b6c-49c0-b409-c1ef6758780d",
+      "controller": "2E9E1F9A92852EA93377FB5E2E9B8F95D305AC4346A2ECA78C49219FBCFF34BD",
+      "fixture_count": 24
+    },
+    "off_start": "OFF",
+    "on": "ON",
+    "stage10_decision": {
+      "seconds": 10,
+      "active_seconds": 10.00044797,
+      "initial_ack": 568,
+      "final_ack": 1068,
+      "feedback_commands_replayed": 500,
+      "watchdog_renewals_verified": 50,
+      "before_5s_rms": 75993.01768675857,
+      "after_5s_rms": 85244.38419070197,
+      "control_drift_db": 0.9978417407836954,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 75993.01768675857,
+      "active_rms": 47549.73868617997,
+      "reduction_db": 4.072511122670026,
+      "rms_reduction_percent": 37.428805785580366,
+      "seconds_at_least_3db_reduction": 7,
+      "fraction_seconds_at_least_3db_reduction": 0.7,
+      "per_second_rms": [
+        64021.11437158838,
+        31574.97118795202,
+        51021.86467486268,
+        38723.23653828538,
+        47884.926614750075,
+        47739.54018379314,
+        39730.88339893791,
+        55513.425831775145,
+        35265.56432130358,
+        54179.34489674086
+      ],
+      "extension_eligible": true,
+      "attenuation_demonstrated": true,
+      "source_level_conservative_power_factor": 1.0,
+      "all_recorded_live_checks_passed": true
+    },
+    "off_end": "OFF",
+    "fixed": "YES",
+    "audible": "YES"
+  },
+  "original_finding": "SUSTAINED_RIGHT_ADAPTIVE_TRACKING_COMPLETE",
+  "recomputed": {
+    "finding": "SUSTAINED_RIGHT_ADAPTIVE_TRACKING_COMPLETE",
+    "error_microphone": "RIGHT",
+    "stage10": {
+      "seconds": 10,
+      "active_seconds": 10.00044797,
+      "initial_ack": 568,
+      "final_ack": 1068,
+      "feedback_commands_replayed": 500,
+      "watchdog_renewals_verified": 50,
+      "before_5s_rms": 75993.01768675857,
+      "after_5s_rms": 85244.38419070197,
+      "control_drift_db": 0.9978417407836953,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 75993.01768675857,
+      "active_rms": 47549.73868617997,
+      "reduction_db": 4.072511122670026,
+      "rms_reduction_percent": 37.428805785580366,
+      "seconds_at_least_3db_reduction": 7,
+      "fraction_seconds_at_least_3db_reduction": 0.7,
+      "per_second_rms": [
+        64021.11437158838,
+        31574.97118795202,
+        51021.86467486268,
+        38723.23653828538,
+        47884.926614750075,
+        47739.54018379314,
+        39730.88339893791,
+        55513.425831775145,
+        35265.56432130358,
+        54179.34489674086
+      ],
+      "extension_eligible": true,
+      "attenuation_demonstrated": true,
+      "source_level_conservative_power_factor": 1.0,
+      "all_recorded_live_checks_passed": true
+    },
+    "stage60": {
+      "seconds": 60,
+      "active_seconds": 60.00344489,
+      "initial_ack": 1068,
+      "final_ack": 4068,
+      "feedback_commands_replayed": 3000,
+      "watchdog_renewals_verified": 300,
+      "before_5s_rms": 79440.2825986917,
+      "after_5s_rms": 88119.57801980215,
+      "control_drift_db": 0.9006325666118177,
+      "controls_within_1_5_db": true,
+      "conservative_reference_rms": 63552.22607895336,
+      "active_rms": 48889.89668310485,
+      "reduction_db": 2.2782329588041,
+      "rms_reduction_percent": 23.071307333330758,
+      "seconds_at_least_3db_reduction": 28,
+      "fraction_seconds_at_least_3db_reduction": 0.4666666666666667,
+      "per_second_rms": [
+        51075.74952538631,
+        46388.26265554682,
+        42738.438754591865,
+        53358.10103555035,
+        37846.78818790308,
+        58538.2652008069,
+        33059.36155977607,
+        57692.412376152206,
+        34628.88468807507,
+        56354.41813824361,
+        45352.43531057621,
+        44146.9079635256,
+        56775.039362910175,
+        35972.3089111611,
+        61460.03251121822,
+        34544.74640144287,
+        60031.99478378175,
+        33711.22815264967,
+        58628.88039098137,
+        35932.0296142592,
+        58668.256960131344,
+        37042.058090230355,
+        56228.864218299845,
+        40708.578297454704,
+        53625.44818404784,
+        51501.92860019904,
+        27058.844531871644,
+        62307.35447280682,
+        38852.670880905986,
+        37532.222231837004,
+        64583.32592813721,
+        27431.32085627668,
+        53057.360918161015,
+        53262.999996245046,
+        27099.219536363034,
+        61883.33773157359,
+        36169.59172260588,
+        37073.876644882985,
+        62739.52332381877,
+        27978.662859400552,
+        63643.46223831635,
+        44044.40512187672,
+        35116.35327735498,
+        68540.42964601258,
+        30404.840216978613,
+        47378.64574510335,
+        63254.27955103117,
+        23928.808262845017,
+        61194.99995685922,
+        54878.99235317646,
+        31415.872020365754,
+        70075.71880444752,
+        32837.91383294621,
+        48773.78706641509,
+        63440.09349882769,
+        34292.938208325046,
+        65902.09412165899,
+        36392.84346626408,
+        65076.71326949449,
+        35319.224736961594
+      ],
+      "extension_eligible": false,
+      "attenuation_demonstrated": false,
+      "source_level_conservative_power_factor": 0.64,
+      "all_recorded_live_checks_passed": true
+    },
+    "source_changes_inside_continuous_60s_interval": true,
+    "active_source_relative_seconds": [
+      28.54766393,
+      88.55110882
+    ],
+    "source_changes": [
+      {
+        "source_second": 38,
+        "amplitude_factor": 0.8,
+        "phase_step_deg": 30
+      },
+      {
+        "source_second": 53,
+        "frequency_hz": 200.1
+      },
+      {
+        "source_second": 68,
+        "amplitude_factor": 1.0,
+        "phase_step_deg": -30
+      },
+      {
+        "source_second": 83,
+        "frequency_hz": 200.0
+      }
+    ],
+    "sustained_feedback_operation_demonstrated": true,
+    "sustained_local_200hz_iq_attenuation_demonstrated": false,
+    "scope": "RIGHT microphone 200 Hz complex I/Q; independent broadband acoustic validation and spatial performance remain separate."
+  },
+  "all_discrete_fields_exact": true,
+  "float_comparison": {
+    "relative_and_absolute_tolerance": 2e-12,
+    "changed_fields": 2,
+    "max_absolute_difference": 1.1102230246251565e-16
+  },
+  "independent_diagnostics": {
+    "10": {
+      "command_gain_min": 3,
+      "command_gain_max": 64,
+      "fraction_at_64_count_cap": 0.548,
+      "max_complex_command_step": 4.011258486059754,
+      "left_active_peak": 56094,
+      "right_active_peak": 73037,
+      "dominant_complex_residual_frequency_offset_hz": 0.5
+    },
+    "60": {
+      "command_gain_min": 3,
+      "command_gain_max": 64,
+      "fraction_at_64_count_cap": 0.596,
+      "max_complex_command_step": 3.4529917706340725,
+      "left_active_peak": 157137,
+      "right_active_peak": 99752,
+      "dominant_complex_residual_frequency_offset_hz": 0.48333333333333334
+    }
+  },
+  "outer_member_sha256": {
+    "controlled_200Hz_100s.wav": "6BC99102D761E8232905B2B6C20D7AF1AE39ACB14E73DC4C784C33D34C8053E9",
+    "custody.json": "4E0BA96E66E166253C4E3C66B989CCDFC57842B51E8E91248D24CB1E3B228785",
+    "result.json": "072AE2C342B61383C7FE8AAFFD3850AA03EE28D15525D2115EF632E06B568B96",
+    "stage10_result.json": "010571EE468D2F3FDADDC41B64F9C14A12CF1D2A49D1D90C831CE9DF56D2CF84",
+    "stage10_target.zip": "C22D240B256D7B27F9A1E80BED7B639BE2A9FCF9E0082310C4862E6690914ADF",
+    "target.zip": "576F652F71CF10886D7A47A58D1790A1FCCABC57C1A46E1257F36799D0C27D61"
+  },
+  "target_member_sha256": {
+    "ambient.csv": "15ECAEFBB5E7AA77C70330DF20B4219D4A6BB4F33001D85D501CB1A33E9C4DBA",
+    "ambient.stderr": "8B7AA5244C3BCEDB20AE79B387A0886481A2D34140A03439C7A584C8AACC2402",
+    "board.json": "AA00AF0F9085BEA540CD1972CFD2542150A291488791A5014B9224A762EECFEE",
+    "build.log": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "off.csv": "21D796402E57E7315CFAD10DCFE770EB90047503E0A56EBA44EA6B9668A56602",
+    "off.stderr": "80D70679233FE944153453BA64EF80373513C5D1D79C740383791C0208A77DC2",
+    "preflight.log": "450A1C6D98ADF68261E9C717855BDE995819A56FB3A27FCF9AC8C6C2B61EEBD1",
+    "stage10.csv": "3AE95DA4AA32D92059FD5DEF0FFBB66DB53AE67E9B6A11F53B28E540B71E3568",
+    "stage10.stderr": "C4BBFA0EECF429D1748B25235012972B62A23E989B9790093D7E6FCEC68B8A94",
+    "stage60.csv": "07EB89B2FE4C819EE6A10EE3BCCD8445EDE69503D76F11EB5F7C28B6027A952B",
+    "stage60.stderr": "D740458486D8A6CD00400B507C752A0A9341D4638F2AFA7EDB10596FAFCB84EC"
+  },
+  "interpretation": "60 s continuous feedback and programmed source chronology verified; declared 60 s attenuation criterion not met. 10 s attenuation criterion met. Frequent 64-count saturation motivates testing higher permitted actuation; it does not prove causation.",
+  "next_trial": {
+    "correction_rate": 0.16,
+    "max_gain": 96,
+    "max_complex_step": 8,
+    "criteria_unchanged": true,
+    "source_and_physical_setup_unchanged": true,
+    "unvalidated_on_physical_target": true
+  }
+}
