@@ -46,7 +46,7 @@ The next experiment starts with diagnosis of the last attempt's preflight stop a
 python tools/verify_results.py
 ```
 
-Python 3.10 or later; standard library only. The verifier reads local files and never connects to hardware. This overview contains selected evidence and documentation, not a deployable controller or FPGA image.
+The verifier runs offline on local evidence files using Python 3.10 or later and the standard library. This overview presents experimental results, supporting evidence and engineering documentation.
 
 Project: **Neil Thomson**. Independent adviser: **Bruce W. Thomson**.
 
