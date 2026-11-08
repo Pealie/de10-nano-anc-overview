@@ -6,7 +6,7 @@ Independent engineering and research into adaptive control of low-frequency soun
 
 *Evidence snapshot: 5 November 2026. Overview prepared: 8 November 2026.*
 
-![Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop.](docs/images/anc-bench-2026-11-07.jpg)
+<img src="docs/images/anc-bench-2026-11-07.jpg" alt="Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop." width="75%">
 
 *Bench photograph, 7 November 2026. The laptop supplies the acoustic disturbance. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph illustrates the later bench arrangement, rather than documenting the exact geometry of either 5 November run.*
 
