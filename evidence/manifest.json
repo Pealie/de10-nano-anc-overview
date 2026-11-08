@@ -67,14 +67,14 @@
       1152
     ],
     "published_dimensions_px": [
-      1152,
-      864
+      640,
+      480
     ],
-    "scale_per_dimension": 0.75,
+    "scale_per_dimension": 0.4166666666666667,
     "source_sha256": "15c608b280b66cb8585cd8fec0fc3691890be0c5adcab77230ec940cbd7f3425",
     "source_bytes": 624231,
-    "published_bytes": 245230,
-    "transformation": "Whole-frame Lanczos downsampling and progressive JPEG recompression; no crop or scene alteration.",
+    "published_bytes": 90570,
+    "transformation": "Whole-frame Lanczos downsampling directly from the original source and progressive JPEG recompression; no crop or scene alteration.",
     "tool": "ImageMagick 7.1.1-43",
     "jpeg_quality": 90,
     "jpeg_sampling_factor": "4:2:0",
@@ -88,10 +88,10 @@
     "CITATION.cff": "ba18db86000f93f2c50d8877f2aed081f59a00224bbf7d125291520294dba0f8",
     "CONTRIBUTING.md": "3f5fd72dbd99fd0c2465df2d1f03f80bae4cd5c281b20f8169945433e60f78ac",
     "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
-    "NOTICE.md": "072e7c228bb9b539040cc6f33b2cfc20d210de2face0a7fe3626cff7f3c04cef",
+    "NOTICE.md": "933ec3506ad8dfc5bff894d4b61defdf8873505cde4323ea959e6956a1179529",
     "README.md": "51735a49ec62f3f91aff4d211b44c82f5b03a72cc8fdc5bf8578a3e3199ed52e",
-    "docs/images/anc-bench-2026-11-07.jpg": "3e510e5ee8322e2fd9b4d923f5b922b66cfe1f08f1917fc7246f4f6eaf695a3a",
-    "docs/provenance.md": "012a0a2f8a29f8b1ba683c40af56c86e61fad6761ee688d5fcf2836c8233f314",
+    "docs/images/anc-bench-2026-11-07.jpg": "5a48045dc9a27bbabf95905943b6dd3775ee2b9e699a86501cba270fcaf01832",
+    "docs/provenance.md": "c6ef558411cf0dead9ac326bfc3397a6f393a4f76d85181460df8eaf2e671670",
     "docs/results.md": "073d466ac51200507bf5f3e4194b5a9a7cea8eb77a88d72e8c485848c28b1f34",
     "docs/system-overview.md": "2ebb1c399ed9e276794b8d4498ece11408b2a5056f6cb239c16f527ca9fc5778",
     "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/review.json": "ecf35bd9698b82565d17d5795892a130c0b8f7b8d11be192ca180623d5ffb640",
