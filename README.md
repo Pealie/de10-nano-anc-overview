@@ -25,7 +25,7 @@ The sustained target requires **at least 3 dB mean attenuation and 54 of 60 one-
 
 ## System and engineering work
 
-The platform uses a Terasic DE10-Nano, Audio Mini codec, two MAX4466 microphone modules, a Nobsound amplifier and a secondary loudspeaker. FPGA logic measures the tone and generates the secondary signal; an embedded C controller on the ARM/Linux side adjusts it. Acquisition uses both microphones; the demonstrated controller uses RIGHT feedback.
+The platform uses a Terasic DE10-Nano, Audio Mini codec, two MAX4466 microphone modules, an amplifier and a secondary loudspeaker. FPGA logic measures the tone and generates the secondary signal; an embedded C controller on the ARM/Linux side adjusts it. Acquisition uses both microphones; the demonstrated controller uses RIGHT feedback.
 
 The work spans FPGA audio acquisition, coherent I/Q measurement, embedded control, Linux audio integration, acoustic-path calibration and reproducible experiment design. [System architecture](docs/system-overview.md)
 
