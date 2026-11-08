@@ -46,16 +46,27 @@ The retained timing metadata places the active interval at source-relative 28.54
 
 Let $z_k=I_k+jQ_k$ be the complex measured target component. Its squared magnitude is $I_k^2+Q_k^2$. Power is averaged before conversion to decibels.
 
-$$P_{\mathrm{active}}=\operatorname{mean}(|z_k|^2).$$
+```math
+P_{\mathrm{active}} = \frac{1}{N} \sum_{k=1}^{N} (I_k^2 + Q_k^2)
+```
+
+Here $N$ is the number of active I/Q windows: 3,000 in a sixty-second span.
 
 For the sixty-second span, the reference is 64% of the smaller power in the two bracketing five-second zero-drive controls:
 
-$$P_{\mathrm{ref}}=0.64\min(P_{\mathrm{before}},P_{\mathrm{after}}).$$
+```math
+P_{\mathrm{ref}} = 0.64 \min(P_{\mathrm{before}}, P_{\mathrm{after}})
+```
 
 This reduces the reference amplitude to 80% of the smaller bracket RMS and accounts conservatively for the programmed source-amplitude reduction. The ten-second check uses a power factor of 1.0.
 
-$$A_{\mathrm{dB}}=10\log_{10}\!\left(\frac{P_{\mathrm{ref}}}{P_{\mathrm{active}}}\right),\qquad
-R_{\mathrm{RMS}}=100\!\left(1-\sqrt{\frac{P_{\mathrm{active}}}{P_{\mathrm{ref}}}}\right).$$
+```math
+A_{\mathrm{dB}} = 10 \log_{10} \left(\frac{P_{\mathrm{ref}}}{P_{\mathrm{active}}}\right)
+```
+
+```math
+R_{\mathrm{RMS}} = 100 \left(1 - \sqrt{\frac{P_{\mathrm{active}}}{P_{\mathrm{ref}}}}\right)
+```
 
 The full sustained criterion requires all three conditions:
 

@@ -37,13 +37,17 @@ The sustained runs applied 50 feedback commands per second: 3,000 commands in ea
 
 For the two published runs, the requested complex drive follows
 
-$$u_{k+1}=u_k-\mu\,e_k/H,$$
+```math
+u_{k+1} = u_k - \mu \frac{e_k}{H}
+```
 
 followed by gain limiting, an eight-count maximum complex command step, and phase/gain quantisation. The initial error comes from the preceding reference windows. Subsequent updates use the preceding active I/Q window. The published replay uses the recorded correction rate, gain ceiling and complex secondary-path coefficient for each run.
 
 The measured coefficient used by the original scorers is
 
-$$H=-302.87207031250017+j\,1879.4453125.$$
+```math
+H = -302.87207031250017 + j 1879.4453125
+```
 
 Its units belong to the project's digital I/Q and drive representation. It is not a calibrated sound-pressure measurement or a generally transferable acoustic model.
 
