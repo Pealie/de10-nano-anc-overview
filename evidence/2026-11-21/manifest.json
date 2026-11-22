@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-21",
+  "source_repository": "Pealie/active_noise_cancellation",
+  "source_commit": "e4dca1284a127563660b930dacb64026ef7d70c9",
+  "source_directory": "evidence/TIM035_DIRECT60_20261121",
+  "scoring_reference": "replay.py",
+  "extraction": "Select W,ACTIVE rows in native order from reference.csv (source only, zero command) and active.csv (adaptive). Preserve RIGHT I and Q from fields 4 and 5 (one-based) and pair by zero-based treatment window. Encode the five columns as ASCII CSV with LF line endings.",
+  "scope": "RIGHT target-tone I/Q numerical replay. The source milestone records the boot grouping.",
+  "acceptance": {
+    "attenuation_db_min": 3,
+    "seconds_meeting_3db_min": 54,
+    "total_seconds": 60,
+    "windows_per_second": 50
+  },
+  "runs": [
+    {
+      "label": "First start",
+      "run": "2a3d336d810f4917b68e6c830faac093",
+      "boot_group": "original",
+      "path": "evidence/2026-11-21/2a3d336d810f4917b68e6c830faac093.csv",
+      "sha256": "7ec67c50b2c79e2854fa19d07654f7bf5a94147148cf3d3cef968c722861b526",
+      "source": {
+        "archive": "target_2a3d336d810f4917b68e6c830faac093.zip",
+        "git_blob": "88088e2f8bb4cf4e39ed04becdf51b26da766f2b",
+        "archive_sha256": "978b495654358a22251c58b906504c8e24588fabf951d242325c6235c9a7c5df",
+        "member_sha256": {
+          "reference.csv": "8479dc7e9d3ec756082657474a21d96f8ec470fb98ae2a27561c6e8711a5fa92",
+          "active.csv": "958cce5559869df01ad43d54593f81aff7db30f926a17288aca14437df264575"
+        }
+      },
+      "expected": {
+        "attenuation_db": 5.63645955684112,
+        "rms_reduction_percent": 47.74,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 3.209,
+        "minimum_second_start": 50,
+        "accepted": true
+      }
+    },
+    {
+      "label": "Repeat",
+      "run": "4fff25db6f384751b9da13c8f4964387",
+      "boot_group": "original",
+      "path": "evidence/2026-11-21/4fff25db6f384751b9da13c8f4964387.csv",
+      "sha256": "3707ef28ef3896e927a2c34e7b3fcfc2cdb40dd23a8bc7c51e99ac854022cef0",
+      "source": {
+        "archive": "target_4fff25db6f384751b9da13c8f4964387.zip",
+        "git_blob": "e4d7c3abafdbf0c9bb388ffcefda8937ed4f8148",
+        "archive_sha256": "6ef34ab3b1658053c4db5ed9c9a442ef7f004fd823b68bf5ea01f9d1c3aaa4fa",
+        "member_sha256": {
+          "reference.csv": "1358224750a80c4c9b399b4f76416ed3d07346b6fce6795f5690387c21ba5b8e",
+          "active.csv": "79f65ee817fab2de4eb2c2a2521d8ee4f3658d6020e349bec93cf34fb4c79ba5"
+        }
+      },
+      "expected": {
+        "attenuation_db": 6.146638680492237,
+        "rms_reduction_percent": 50.72,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 5.41,
+        "minimum_second_start": 49,
+        "accepted": true
+      }
+    },
+    {
+      "label": "After reboot",
+      "run": "e42f6d3387874e65865781801ea7e9a5",
+      "boot_group": "fresh",
+      "path": "evidence/2026-11-21/e42f6d3387874e65865781801ea7e9a5.csv",
+      "sha256": "85420848e3aeda241eccb50279c6784febe35f09834117817781790965bb5077",
+      "source": {
+        "archive": "target_e42f6d3387874e65865781801ea7e9a5.zip",
+        "git_blob": "600b877b17ddfd1e331dadffae0c438a9a8ce0d1",
+        "archive_sha256": "8e6359448b1e65764ea162a3881110217124de0a35957e89b7c7d8af3cceb258",
+        "member_sha256": {
+          "reference.csv": "fcbe2a241736919a47f24ac4dc460c0b8399f8f3d67bb7a9180b59912db4c4f1",
+          "active.csv": "ca8b0e85903085f513c88572e03e440d07fcc2a00ca28c0952ed72d9f20ec0d9"
+        }
+      },
+      "expected": {
+        "attenuation_db": 5.695801422770195,
+        "rms_reduction_percent": 48.09,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 4.82,
+        "minimum_second_start": 0,
+        "accepted": true
+      }
+    }
+  ]
+}

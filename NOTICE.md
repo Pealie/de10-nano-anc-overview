@@ -2,7 +2,7 @@
 
 ## Licence
 
-This overview retains the source project's **GNU General Public License, version 3**. The complete licence is provided in [LICENSE](LICENSE). Unless a file states otherwise, the original overview text, diagram, verification script, selected project records and bench photograph are distributed under that licence. The new verification script uses the identifier `GPL-3.0-only`.
+This overview retains the source project's **GNU General Public License, version 3**. The complete licence is provided in [LICENSE](LICENSE). Unless a file states otherwise, the original overview text, diagram, verification scripts, selected project records and bench photograph are distributed under that licence. The verification scripts use the identifier `GPL-3.0-only`.
 
 The Free Software Foundation copyright line in the licence text identifies the author of that licence document; it does not identify the author of the engineering project.
 
@@ -14,12 +14,12 @@ This licence choice applies to the material included here. It does not relicense
 - Independent adviser: Bruce W. Thomson.
 - Bench photograph: supplied by Neil Thomson; taken 7 November 2026. The overview uses a resized 640 × 480 pixel JPEG; the original source identity and transformation are recorded in [docs/provenance.md](docs/provenance.md).
 - Original measurement records and review reports: selected from Neil Thomson's `Pealie/active_noise_cancellation` project at the source identities recorded in [docs/provenance.md](docs/provenance.md).
-- Offline verifier: prepared for this overview from the published-record format and the source project's `tim035_right_sustain_score.py` and `tim035_right_iq_score.py` algorithms. It uses Python's standard library and retains the project licence.
+- The 4–5 November verifier implements the source project’s `tim035_right_sustain_score.py` and `tim035_right_iq_score.py` algorithms. The 21 November verifier recomputes matched-pair attenuation from selected RIGHT I/Q records. Both use Python’s standard library and retain the project licence.
 
 No third-party driver, vendor RTL, hardware manual, live controller, launcher, programming image or account credential is included.
 
 ## Evidence status
 
-The public selection permits recomputation of attenuation, recorded-command replay, watchdog checks and checks of the retained disarm records. It is not the complete development repository, a hardware deployment release, independent acoustic replication, or a product qualification.
+The public records support attenuation replay for both dates. The 4–5 November logs also support replay of applied commands, watchdog renewals and final disarm. The 21 November extracts contain the paired measurements used for acoustic scoring. Independent acoustic replication and product qualification remain open.
 
 Hashes identify retained bytes and support comparison with source records. A hash does not establish that a physical measurement was accurate. The scope and limitations in [docs/results.md](docs/results.md) form part of the interpretation of the published figures.

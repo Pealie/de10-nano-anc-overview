@@ -2,28 +2,25 @@
 
 Independent engineering and research into adaptive control of low-frequency sound, combining FPGA signal processing, embedded Linux and acoustic experiments.
 
-**Demonstrated:** two continuous 60-second adaptive-feedback runs while an external tone changed in level, phase and frequency around 200 Hz. Local target-tone RMS amplitude fell by **23.07%** and **22.62%** against the conservative reference.
-
-**Next milestone:** at least 3 dB mean attenuation, with 54 of 60 one-second intervals reaching 3 dB.
-
-*Evidence snapshot: 5 November 2026. Overview prepared: 8 November 2026.*
+**The sustained 3 dB target was met on 21 November 2026.** Three 60-second adaptive runs attenuated the tracked external tone near 200 Hz by **5.64 dB, 6.15 dB and 5.70 dB** at the marked RIGHT microphone. All **180 of 180** one-second intervals exceeded 3 dB. The third run repeated the result on the same board after a reboot.
 
 <p align="center">
   <img src="docs/images/anc-bench-2026-11-07.jpg" alt="Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop." width="75%">
 </p>
 
-*Bench photograph, 7 November 2026. The laptop generates the external test tone. Both MAX4466 microphones feed the Audio Mini; the RIGHT microphone supplies the feedback error. The photograph shows a later bench arrangement.*
+*Bench photograph, 7 November 2026. The laptop generates the external test tone. The Audio Mini acquires both MAX4466 microphones. RIGHT supplies the feedback error. The photograph predates the 21 November trials.*
 
 ## Experimental results
 
-| Physical experiment | Active feedback | Target-tone RMS reduction | Mean attenuation | One-second intervals reaching 3 dB |
+Each adaptive minute on 21 November had its own zero-command source-only reference minute. Both used the same playback programme with changes in tone level, phase and frequency. Each start had to achieve at least 3 dB overall and at least 54 of 60 one-second intervals at or above 3 dB.
+
+| 21 November matched pair | Overall attenuation | Target-tone RMS reduction | Intervals ≥3 dB | Weakest second |
 | --- | ---: | ---: | ---: | ---: |
-| Run A: correction rate 0.08, gain ceiling 64 | 60.003 s | 23.07% | 2.28 dB | 28 / 60 |
-| Run B: correction rate 0.16, gain ceiling 96 | 60.003 s | 22.62% | 2.23 dB | 22 / 60 |
+| First start | 5.64 dB | 47.74% | 60/60 | 3.21 dB |
+| Repeat, same boot | 6.15 dB | 50.72% | 60/60 | 5.41 dB |
+| After reboot | 5.70 dB | 48.09% | 60/60 | 4.82 dB |
 
-Both runs maintained feedback throughout the programmed source changes and ended disarmed. Separate software replays checked the applied feedback commands and watchdog renewals. The selected original measurements and offline replay are included here.
-
-The sustained target requires **at least 3 dB mean attenuation and 54 of 60 one-second intervals reaching 3 dB**, with the control measurements within the permitted drift. Three decibels corresponds to approximately 29% RMS amplitude reduction. These criteria govern the next physical comparison.
+The two 4–5 November runs achieved **2.28 dB** (23.07% RMS, 28/60 intervals) and **2.23 dB** (22.62% RMS, 22/60 intervals). Both missed their sustained criterion against a conservative reference derived from bracketing controls. The two series used different reference measurements. [Results and scoring for both dates](docs/results.md)
 
 ## System and engineering work
 
@@ -31,24 +28,23 @@ The platform uses a Terasic DE10-Nano, Audio Mini codec, two MAX4466 microphone 
 
 The work spans FPGA audio acquisition, coherent I/Q measurement, embedded control, Linux audio integration, acoustic-path calibration and reproducible experiment design. [System architecture](docs/system-overview.md)
 
-## Measurement scope and next experiment
+## Measurement scope
 
-The reported percentages quantify target-tone RMS amplitude reduction at the RIGHT microphone position. Assessments of perceived loudness, spatial coverage and broadband performance require dedicated measurements. Qualification priorities include timing, calibrated acoustic output, repeatability and wider operating conditions.
-
-The next experiment covers diagnosis of the recorded preflight stop, verification of progress reporting and timeout handling, and a bounded attenuation comparison against the stated criteria.
+The measurements establish repeatability at one marked microphone position in this setup across two boots. The trials leave broadband attenuation, the spatial extent of the reduction and perceived loudness unmeasured. Independent laboratory replication remains open. The 21 November comparison used zero secondary drive as its reference. An adaptive-versus-fixed-command comparison would answer a separate question.
 
 ## Explore the evidence
 
 - [Results, reference calculation and measurement scope](docs/results.md)
-- [Original data and offline verification](evidence/README.md)
+- [Measurement data and offline verification](evidence/README.md)
 - [Source identities and publication scope](docs/provenance.md)
 - [Licence and attribution](NOTICE.md)
 
 ```sh
 python tools/verify_results.py
+python tools/verify_tim035.py
 ```
 
-The verifier runs offline on local evidence files using Python 3.10 or later and the standard library. This overview presents experimental results, supporting evidence and engineering documentation.
+Both commands run offline with Python 3.10 or later and the standard library. The first replays the 4–5 November experiments. The second scores the three 21 November matched pairs from the selected RIGHT I/Q measurements.
 
 Project: **Neil Thomson**. Independent adviser: **Bruce W. Thomson**.
 

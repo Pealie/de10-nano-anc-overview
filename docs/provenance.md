@@ -2,15 +2,21 @@
 
 ## Snapshot identity
 
-- Overview date: **8 November 2026**, Europe/London.
-- Experimental close-out: **5 November 2026**, covering the 4–5 November session.
+- Overview updated **22 November 2026**, Europe/London. Initial overview dated 8 November.
+- Experimental records cover the **4–5 November** session and **21 November 2026** matched pairs.
 - Authoritative development repository: `Pealie/active_noise_cancellation` (private).
-- Research milestone: `c14634648633aa681fce9d8195fe0e75c904c58c`.
+- 4–5 November research milestone: `c14634648633aa681fce9d8195fe0e75c904c58c`.
 - Photograph source revision: `4ee3f48f5b7e90a78feb532ce30c4b6e7a3b0c30`.
 
 The private source identifiers support provenance for authorised readers. Every file needed by this overview's offline verifier is included in this repository; public verification does not require access to the private repository.
 
-## Selected material
+## 21 November matched-pair evidence
+
+The development record for `evidence/TIM035_DIRECT60_20261121/` is pinned at `e4dca1284a127563660b930dacb64026ef7d70c9`. Its three target archives contain separate `reference.csv` and `active.csv` traces. Each public extract pairs their treatment windows in native order and carries only the index and four RIGHT I/Q integers. The [dated manifest](../evidence/2026-11-21/manifest.json) identifies each archive, both source members and the exact bytes of the corresponding public CSV by hash.
+
+The public verifier recomputes attenuation and the per-start verdict from those CSVs. The development replay additionally verifies commands, readbacks, watchdog renewals and final disarm against the archived release scorer. Boot grouping comes from the board records, with the fresh boot checked against the operator’s pre-run reading. Geometry and playback settings come from the operator record. Independent software recomputation and physical replication by another laboratory are separate claims.
+
+## 4–5 November material and overview photograph
 
 | Public material | Source and treatment |
 | --- | --- |
@@ -30,7 +36,7 @@ On 8 November 2026, the overview photograph was reduced from **1536 × 1152** to
 
 The file size fell from **624,231** to **90,570 bytes**. The original remains identified by the pinned source revision and Git blob above. The derivative's SHA-256 and transformation details are recorded in [evidence/manifest.json](../evidence/manifest.json).
 
-## Original archive identities
+## 4–5 November archive identities
 
 **Run A**
 
@@ -52,7 +58,7 @@ The file size fell from **624,231** to **90,570 bytes**. The original remains id
 
 The complete original archives remain in the private engineering record. Their hashes are identities, not publicly downloadable evidence in this overview. The extracted measurements needed for the selected replay are available here.
 
-## Replay source identities
+## 4–5 November replay source identities
 
 At each experiment's source commit, the original scoring paths are:
 
@@ -61,7 +67,7 @@ At each experiment's source commit, the original scoring paths are:
 
 The sustained scorer uses the matching run's settings. The shared I/Q scorer has source Git blob `2f70bcfa5edf0ba9d613f16a549660fba7cade56`. The Run A sustained scorer has blob `3be36a8715e9867cb4c8dd64464af7cacfb013ab`; the Run B version has blob `0283cdeb58c5d4e5c2591195c27e3870d0c74f1a`.
 
-The new verifier substitutes Python standard-library arithmetic for NumPy. It checks the original member hashes, replays every command and watchdog renewal, then compares the resulting metrics with the retained reports using stated numerical tolerances. This is a computational consistency check, not an independent acoustic experiment.
+The 4–5 November verifier substitutes Python standard-library arithmetic for NumPy. It checks the original member hashes, replays every command and watchdog renewal, then compares the resulting metrics with the retained reports using stated numerical tolerances. This is a computational consistency check, not an independent acoustic experiment.
 
 ## Hashes, privacy and maintenance
 
