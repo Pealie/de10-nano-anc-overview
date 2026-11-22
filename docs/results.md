@@ -1,12 +1,22 @@
 # Experimental results and limitations
 
-## Judgement
+## Matched-pair results, 21 November 2026
 
-Two physical experiments completed sustained adaptive feedback while an external source changed in amplitude, phase and frequency. Both reduced the local target-tone RMS amplitude against the conservative reference. Neither satisfied the declared sustained attenuation criterion. These are distinct findings.
+Three separately started 60-second experiments met the sustained target at the marked RIGHT microphone. Each adaptive minute was scored against a dedicated source-only minute with zero secondary command and the same programmed changes in amplitude, phase and frequency near 200 Hz.
 
-The measurements below are RIGHT-microphone complex I/Q around the 200 Hz reference. They are not calibrated sound-pressure levels or measurements of total broadband noise.
+| Start | Board boot | Overall attenuation | Target-tone RMS reduction | Intervals ≥3 dB | Weakest one-second interval |
+| --- | --- | ---: | ---: | ---: | --- |
+| First | Original | 5.636460 dB | 47.74% | 60/60 | 3.209 dB at 50–51 s |
+| Repeat | Original | 6.146639 dB | 50.72% | 60/60 | 5.410 dB at 49–50 s |
+| After reboot | Fresh | 5.695801 dB | 48.09% | 60/60 | 4.820 dB at 0–1 s |
 
-## Completed experiments, 4–5 November 2026
+Each minute supplied 3,000 RIGHT I/Q windows of 20 ms. For a matched set of windows, let $E_r$ and $E_a$ be the sums of $I^2+Q^2$ over the source-only reference and adaptive recordings respectively. Overall attenuation is $10\log_{10}(E_r/E_a)$ and RMS amplitude reduction is $100(1-\sqrt{E_a/E_r})$ per cent. The same calculation over each corresponding block of 50 windows gives the one-second scores. The decision uses the unrounded scores. Each start required at least 3 dB overall and at least 54 of 60 individual seconds at or above 3 dB.
+
+The source-only minute preceded the adaptive minute in each pair. The operator recorded laptop playback at 80%, a 5 cm distance from secondary loudspeaker to RIGHT, and fixed settings within each pair. The digital gain ceiling was 20. The first two starts shared a board boot. The third ran on the same board after a reboot, with its boot identity confirmed against the operator’s pre-run record. The source records report 3,000 adaptive commands and 300 watchdog renewals per adaptive minute, with final disarm in all six traces. The [public extracts](../evidence/README.md) support numerical replay of attenuation. The boot and controller checks come from the source records.
+
+## Earlier experiments, 4–5 November 2026
+
+Both runs sustained feedback while the external source changed. Both missed the attenuation criterion then in force.
 
 | Quantity | Run A | Run B |
 | --- | ---: | ---: |
@@ -29,7 +39,7 @@ RMS values use the digital I/Q scale. Absolute values are not acoustic SPL. Each
 
 Across the ten-second and sixty-second spans combined, each experiment contains 3,500 feedback commands and 350 watchdog renewals. Counts of 3,000 / 300 refer specifically to the sixty-second span.
 
-## Source programme
+### 4–5 November source programme
 
 The acoustic source ran for approximately 100 seconds per experiment. The following nominal events occurred inside each continuous sixty-second active interval:
 
@@ -42,7 +52,7 @@ The acoustic source ran for approximately 100 seconds per experiment. The follow
 
 The retained timing metadata places the active interval at source-relative 28.5477–88.5511 s for Run A and 28.5586–88.5621 s for Run B. The offline replay checks that the nominal events lie within those intervals. Their physical acoustic waveform is not independently established by the event schedule alone.
 
-## Scoring
+### 4–5 November scoring
 
 Let $z_k=I_k+jQ_k$ be the complex measured target component. Its squared magnitude is $I_k^2+Q_k^2$. Power is averaged before conversion to decibels.
 
@@ -78,17 +88,18 @@ Both experiments met the control-drift condition and missed the two attenuation 
 
 ## Limits on interpretation
 
-- Attenuation is local and tone-specific. Spatial extent, broadband benefit and perceived loudness reduction have not been established.
-- Two different settings were each run once. The background differed, so the figures do not establish improvement or equivalence between the settings.
-- The original analyses recorded frequent gain-ceiling operation and a nearby residual component. A nearby component also appeared before laptop playback; its physical origin remains unconfirmed.
-- Command replay is a computational check of retained records, not independent laboratory replication or human peer review.
+- Attenuation is local and tone-specific. The digital RIGHT I/Q measurements describe the tracked component at one position. Spatial extent, broadband benefit and perceived loudness reduction have not been established.
+- On 4–5 November, two different settings were each run once. The background differed, so the figures do not establish improvement or equivalence between the settings.
+- The 4–5 November analyses recorded frequent gain-ceiling operation and a nearby residual component. A nearby component also appeared before laptop playback; its physical origin remains unconfirmed.
+- All three 21 November pairs used the same apparatus and marked position. Separate scoring and one reboot establish within-bench repeatability. Independent laboratory replication and calibrated sound-pressure measurements remain open.
+- A source-only comparator measures the effect of enabling adaptive control. Estimating an advantage over a fixed command requires a fixed-command trial under matched conditions. The common reference-first order leaves possible time effects unseparated. Differences in reference method and drive settings limit direct comparisons between dates.
 - Complete end-to-end latency, full electrical timing, calibrated SPL and analogue fault containment remain separate qualification tasks.
 - The earlier approximately 73% short-duration figure belongs to a different fixed-tone experiment and geometry. Its original records are outside this selected public evidence set; it is not a sixty-second sustained result.
 
-## Last attempt and next experiment
+## Historical preflight stop, 5 November
 
 The subsequent 0.32-rate / 128-count controller revision passed its reported offline cases, but its physical attempt stopped during preflight before the amplifier-ON prompt or playback. The exact timeout cause was not established by the returned archive. That revision has no new physical attenuation result.
 
-The next three engineering actions are to retrieve the target preflight diagnostics, qualify progress reporting and timeout handling, then repeat the bounded comparison under the unchanged criteria.
+The three scored 21 November starts form a later campaign with a matched source-only reference for each adaptive minute.
 
 [Replay these measurements](../evidence/README.md) · [Provenance](provenance.md)

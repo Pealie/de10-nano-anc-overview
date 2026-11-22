@@ -35,7 +35,7 @@ The sustained runs applied 50 feedback commands per second: 3,000 commands in ea
 
 ## Adaptive law and recorded checks
 
-For the two published runs, the requested complex drive follows
+For the two 4–5 November 2026 runs, the requested complex drive follows
 
 ```math
 u_{k+1} = u_k - \mu \frac{e_k}{H}
@@ -43,7 +43,7 @@ u_{k+1} = u_k - \mu \frac{e_k}{H}
 
 followed by gain limiting, an eight-count maximum complex command step, and phase/gain quantisation. The initial error comes from the preceding reference windows. Subsequent updates use the preceding active I/Q window. The published replay uses the recorded correction rate, gain ceiling and complex secondary-path coefficient for each run.
 
-The measured coefficient used by the original scorers is
+The measured coefficient used by the 4–5 November scorers is
 
 ```math
 H = -302.87207031250017 + j 1879.4453125
@@ -51,12 +51,14 @@ H = -302.87207031250017 + j 1879.4453125
 
 Its units belong to the project's digital I/Q and drive representation. It is not a calibrated sound-pressure measurement or a generally transferable acoustic model.
 
-Recorded checks include window sequence, microphone peak ceilings, applied-command acknowledgements, watchdog lease renewal, active duration and disarm. Their replay establishes consistency of the retained records. Complete electrical timing and analogue fault containment require separate physical qualification.
+The 4–5 November records include window sequence, microphone peak ceilings, applied-command acknowledgements, watchdog lease renewal, active duration and disarm. Their replay establishes consistency of the retained records. Complete electrical timing and analogue fault containment require separate physical qualification.
 
 ## Experimental geometry and interpretation
 
-The sustained-session record gives microphone spacing of approximately seven inches, with the laptop source approximately seven inches from LEFT and ten inches from RIGHT. These are bench dimensions, not a controlled acoustic enclosure. The photograph was taken two days after the sustained trials and is not evidence that every component remained in precisely the trial position.
+The 4–5 November session record gives microphone spacing of approximately seven inches, with the laptop source approximately seven inches from LEFT and ten inches from RIGHT. These are bench dimensions, not a controlled acoustic enclosure. The photograph was taken two days after the sustained trials and is not evidence that every component remained in precisely the trial position.
 
-The source-to-microphone distance difference does not establish a usable feedforward reference: the demonstrated controller is RIGHT feedback. Acoustic transfer paths, background tones, secondary-speaker authority and controller limits can affect the residual. The two published settings were not replicated under identical backgrounds, so their difference does not establish a causal tuning improvement.
+The source-to-microphone distance difference does not establish a usable feedforward reference: the demonstrated controller is RIGHT feedback. Acoustic transfer paths, background tones, secondary-speaker authority and controller limits can affect the residual. Each 4–5 November setting was tested once, with a different background.
+
+On 21 November, the operator recorded a 5 cm distance from the secondary loudspeaker to the marked RIGHT microphone and a digital gain ceiling of 20. Each of three adaptive minutes had its own source-only reference minute. The third pair followed a board reboot. [Matched-pair results](results.md)
 
 [Measured results](results.md) · [Evidence and replay](../evidence/README.md)

@@ -17,5 +17,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: Verify hashes, control records and measured results
+      - name: Verify published hashes and replay the 5 November experiments
         run: python3 tools/verify_results.py
+      - name: Replay the 21 November matched-pair measurements
+        run: python3 tools/verify_tim035.py

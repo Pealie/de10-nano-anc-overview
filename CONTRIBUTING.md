@@ -5,9 +5,14 @@ This repository presents selected results from an active research project. The p
 For a new evidence snapshot:
 
 1. Record the experiment date, source commit and original archive hashes. Check proposed files for private details and third-party licence notices.
-2. Add original numeric records under a new dated evidence directory. Preserve existing evidence bytes. Describe any transformation or redaction explicitly.
+2. Add the numeric records needed to reproduce the new result under a dated evidence directory. Preserve existing evidence bytes. Describe any selection, transformation or redaction explicitly.
 3. Update the result tables, limitations and provenance together. Distinguish physical measurements from offline-only changes, proposed work and historical results.
-4. Update the reviewed file hashes in `evidence/manifest.json`, then run `python tools/verify_results.py` and check every relative link and image.
+4. Update the reviewed file hashes in `evidence/manifest.json`, then run both offline checks and check every relative link and image.
+
+```sh
+python tools/verify_results.py
+python tools/verify_tim035.py
+```
 
 New acceptance criteria require an explicit dated explanation. Historical pass/fail decisions remain associated with the criteria used for those experiments.
 

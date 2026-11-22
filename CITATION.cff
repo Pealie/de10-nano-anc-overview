@@ -5,12 +5,12 @@ type: software
 authors:
   - family-names: Thomson
     given-names: Neil
-version: "2026.11.08"
-date-released: 2026-11-08
+version: "2026.11.22"
+date-released: 2026-11-22
 license: GPL-3.0-only
 repository-code: "https://github.com/Pealie/de10-nano-anc-overview"
 url: "https://github.com/Pealie/de10-nano-anc-overview"
-abstract: "Selected records and offline replay for two sustained adaptive-feedback experiments around 200 Hz. Local target-tone RMS reduction was approximately 23%; the declared sustained attenuation criterion remained unmet."
+abstract: "Three 60-second matched pairs across two board boots achieved 5.64, 6.15 and 5.70 dB attenuation of a tracked tone near 200 Hz at one marked RIGHT microphone position. All 180 one-second intervals exceeded 3 dB. The public evidence also preserves the two earlier experiments from 4–5 November 2026 and their original scores."
 keywords:
   - active noise cancellation
   - FPGA
