@@ -2,13 +2,21 @@
 
 ## Snapshot identity
 
-- Overview updated **22 November 2026**, Europe/London. Initial overview dated 8 November.
-- Experimental records cover the **4–5 November** session and **21 November 2026** matched pairs.
+- Overview updated **24 November 2026**, Europe/London. Initial overview dated 8 November.
+- Experimental records cover the **4–5 November** session and the **21 and 24 November 2026** matched-pair series.
 - Authoritative development repository: `Pealie/active_noise_cancellation` (private).
 - 4–5 November research milestone: `c14634648633aa681fce9d8195fe0e75c904c58c`.
 - Photograph source revision: `4ee3f48f5b7e90a78feb532ce30c4b6e7a3b0c30`.
 
 The private source identifiers support provenance for authorised readers. Every file needed by this overview's offline verifier is included in this repository; public verification does not require access to the private repository.
+
+## 24 November phase-ramped matched pairs
+
+The three complete bench archives and their replay kit are pinned in the private development record at `93a17f2eeee83075a8e44be58dd5f14ad754e4de`, under `evidence/TIM035_SMOOTH60_20261124/`. Each bench archive contains a `target.zip` with the original `reference.csv` and `active.csv` traces. The public extract selects the 3,000 `W,ACTIVE` measurement windows from each trace in acquisition order, pairs them by zero-based window index and retains the four signed RIGHT I/Q integers. In the reference leg the secondary drive was zero throughout those windows. The [dated manifest](../evidence/2026-11-24/manifest.json) identifies the source records and public extracts by hash.
+
+The private replay checked the same controller release and source waveform for all three pairs, distinct boot identities, and the command, timing and disarm records. The public CSVs support recomputation of the acoustic scores and source-only and adaptive RMS at the marked RIGHT microphone. The operator confirmed the playback level, geometry and amplifier setting for each pair.
+
+The [three-start figure](images/tim035-three-boots.png) is a byte-for-byte copy of `TIM035_three_boots.png` at the pinned development revision. Its one-second curves use the summed RIGHT I/Q power in each group of 50 corresponding windows. Its RMS values use all 3,000 windows in each leg. The [top-level manifest](../evidence/manifest.json) records the published image hash.
 
 ## 21 November matched-pair evidence
 

@@ -19,5 +19,5 @@ jobs:
           persist-credentials: false
       - name: Verify published hashes and replay the 5 November experiments
         run: python3 tools/verify_results.py
-      - name: Replay the 21 November matched-pair measurements
+      - name: Replay the 21 and 24 November matched-pair measurements
         run: python3 tools/verify_tim035.py

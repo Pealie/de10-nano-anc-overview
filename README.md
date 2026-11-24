@@ -2,25 +2,25 @@
 
 Independent engineering and research into adaptive control of low-frequency sound, combining FPGA signal processing, embedded Linux and acoustic experiments.
 
-**The sustained 3 dB target was met on 21 November 2026.** Three 60-second adaptive runs attenuated the tracked external tone near 200 Hz by **5.64 dB, 6.15 dB and 5.70 dB** at the marked RIGHT microphone. All **180 of 180** one-second intervals exceeded 3 dB. The third run repeated the result on the same board after a reboot.
+**Three 60-second runs on three distinct board boots reduced the tracked tone near 200 Hz by 7.55, 9.03 and 10.14 dB at the marked RIGHT microphone.** The best minute on 24 November 2026 gave a **68.9% reduction in target-tone RMS**. Across the three minutes, all **180/180 one-second intervals** exceeded 3 dB.
 
 <p align="center">
   <img src="docs/images/anc-bench-2026-11-07.jpg" alt="Experimental bench with two microphones, the secondary loudspeaker and amplifier, and the DE10-Nano beside the laptop." width="75%">
 </p>
 
-*Bench photograph, 7 November 2026. The laptop generates the external test tone. The Audio Mini acquires both MAX4466 microphones. RIGHT supplies the feedback error. The photograph predates the 21 November trials.*
+*Bench photograph, 7 November 2026. The laptop generates the external test tone. The Audio Mini acquires both MAX4466 microphones. RIGHT supplies the feedback error. The photograph predates both matched-pair series.*
 
 ## Experimental results
 
-Each adaptive minute on 21 November had its own zero-command source-only reference minute. Both used the same playback programme with changes in tone level, phase and frequency. Each start had to achieve at least 3 dB overall and at least 54 of 60 one-second intervals at or above 3 dB.
+On 24 November the laptop played the same near-200 Hz programme in each source-only minute and its paired adaptive minute. A change of 30° in source phase took 20 ms. The secondary loudspeaker was 5 cm from the RIGHT microphone. Playback level, geometry and controller settings were fixed within each pair.
 
-| 21 November matched pair | Overall attenuation | Target-tone RMS reduction | Intervals ≥3 dB | Weakest second |
+| 24 November start | Overall attenuation | Target-tone RMS reduction | Seconds ≥3 dB | Weakest second |
 | --- | ---: | ---: | ---: | ---: |
-| First start | 5.64 dB | 47.74% | 60/60 | 3.21 dB |
-| Repeat, same boot | 6.15 dB | 50.72% | 60/60 | 5.41 dB |
-| After reboot | 5.70 dB | 48.09% | 60/60 | 4.82 dB |
+| 1 | 7.55 dB | 58.07% | 60/60 | 5.57 dB |
+| 2 | 9.03 dB | 64.64% | 60/60 | 6.91 dB |
+| 3 | 10.14 dB | 68.87% | 60/60 | 8.22 dB |
 
-The two 4–5 November runs achieved **2.28 dB** (23.07% RMS, 28/60 intervals) and **2.23 dB** (22.62% RMS, 22/60 intervals). Both missed their sustained criterion against a conservative reference derived from bracketing controls. The two series used different reference measurements. [Results and scoring for both dates](docs/results.md)
+The sustained target was first met on 21 November. With abrupt source phase changes, three starts across two boots measured **5.64, 6.15 and 5.70 dB** and all 180 seconds exceeded 3 dB. The microphone ground was repaired between the two series. The 4–5 November runs measured 2.28 and 2.23 dB using an earlier reference method. [Results, comparison plot and scoring](docs/results.md)
 
 ## System and engineering work
 
@@ -30,7 +30,7 @@ The work spans FPGA audio acquisition, coherent I/Q measurement, embedded contro
 
 ## Measurement scope
 
-The measurements establish repeatability at one marked microphone position in this setup across two boots. The trials leave broadband attenuation, the spatial extent of the reduction and perceived loudness unmeasured. Independent laboratory replication remains open. The 21 November comparison used zero secondary drive as its reference. An adaptive-versus-fixed-command comparison would answer a separate question.
+The measurements establish repeatable attenuation of the tracked tone at one microphone position on this bench. Broadband attenuation, spatial coverage and perceived loudness remain unmeasured. Each source-only minute preceded its adaptive minute, and the measured reference level varied across starts. An adaptive-versus-fixed-command comparison and replication on another bench remain open.
 
 ## Explore the evidence
 
@@ -44,7 +44,7 @@ python tools/verify_results.py
 python tools/verify_tim035.py
 ```
 
-Both commands run offline with Python 3.10 or later and the standard library. The first replays the 4–5 November experiments. The second scores the three 21 November matched pairs from the selected RIGHT I/Q measurements.
+Both commands run offline with Python 3.10 or later and the standard library. The first replays the 4–5 November experiments. The second scores the six matched pairs from 21 and 24 November using the published RIGHT I/Q measurements.
 
 Project: **Neil Thomson**. Independent adviser: **Bruce W. Thomson**.
 

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-24",
+  "source_repository": "Pealie/active_noise_cancellation",
+  "source_commit": "93a17f2eeee83075a8e44be58dd5f14ad754e4de",
+  "source_directory": "evidence/TIM035_SMOOTH60_20261124",
+  "scoring_reference": "TIM035_smooth_pair.zip (offline bench.py replay)",
+  "source_protocol": "TIM035_5cm_20ms_phase_ramp_v1",
+  "source_pcm_sha256": "ea7ce1e9fba19803567c52ffda706907eac6f79eecb458d25db0c435cfc35ed8",
+  "release_sha256": "8ab9769aa4816ef0bafe3ae7b4a95767ffbaf7a6c99d55cd1f5257f55b3dc52c",
+  "extraction": "Select W,ACTIVE rows in native order from reference.csv (source only, zero command) and active.csv (adaptive). Preserve RIGHT I and Q from fields 4 and 5 (one-based) and pair by zero-based treatment window. Encode the five columns as ASCII CSV with LF line endings.",
+  "scope": "RIGHT target-tone I/Q numerical replay. Boot group, source identity and operator-confirmed setup are recorded in the original bench archives.",
+  "acceptance": {
+    "attenuation_db_min": 3,
+    "seconds_meeting_3db_min": 54,
+    "total_seconds": 60,
+    "windows_per_second": 50
+  },
+  "runs": [
+    {
+      "label": "Phase-ramped start 1",
+      "run": "97648726df5a4cab92dfad5b05a33752",
+      "boot_group": "boot_1",
+      "path": "evidence/2026-11-24/97648726df5a4cab92dfad5b05a33752.csv",
+      "sha256": "abc8823eebfd8a8c3824c61b4be074d64f9acc58b75e4174004a3b2612f2f771",
+      "source": {
+        "archive": "TIM035_smooth60_pair_97648726df5a4cab92dfad5b05a33752.zip",
+        "git_blob": "a7c1b0ad84ddc51452a8260f01ebe407eb286900",
+        "archive_sha256": "8631c6b165731020388ad824db60c7b237be75abd2b6e8c3a6a8fc9f1241485c",
+        "target_member": "target.zip",
+        "target_sha256": "c238c0fbdf6333885c6e04ccf79c087247954b123e1e12f789f6f3e31293255b",
+        "member_sha256": {
+          "reference.csv": "b35dc1f55eae7de3764b9f8f1983c3d2b24ebb8c9b384ca343f2782469691cfd",
+          "active.csv": "c5bdda79de7083ca4bd2c3192f0625f9be23b8616f8c865007afe775b37f17b5"
+        }
+      },
+      "expected": {
+        "attenuation_db": 7.550074838055471,
+        "rms_reduction_percent": 58.07,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 5.572,
+        "minimum_second_start": 56,
+        "accepted": true,
+        "reference_rms_counts": 106992,
+        "adaptive_rms_counts": 44859
+      }
+    },
+    {
+      "label": "Phase-ramped start 2",
+      "run": "719b58fdf382469db978c6a82414585d",
+      "boot_group": "boot_2",
+      "path": "evidence/2026-11-24/719b58fdf382469db978c6a82414585d.csv",
+      "sha256": "d8b99d325d369010ef57336d9877973c9adc5f68dab3e5625e8add0dee1d9781",
+      "source": {
+        "archive": "TIM035_smooth60_pair_719b58fdf382469db978c6a82414585d.zip",
+        "git_blob": "a9d87613b861508da327729f28f31dd0ead5823f",
+        "archive_sha256": "1da905d2e923b53418a5205e3f0b944043cf8952474330f8bf369c773597683e",
+        "target_member": "target.zip",
+        "target_sha256": "6f9d5c58dbaa559fce3b69a06e0e9098fd76d702c16bc2a6f56fa343a3a69ace",
+        "member_sha256": {
+          "reference.csv": "897b9d8bdae3ec4b8cf56685e47ec5b5cd609c1817556282b2c413d38d9574a9",
+          "active.csv": "398f1f511bfcf997952928952f6260b99e6847666c5885133fe93deb2e999224"
+        }
+      },
+      "expected": {
+        "attenuation_db": 9.028970606157525,
+        "rms_reduction_percent": 64.64,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 6.905,
+        "minimum_second_start": 0,
+        "accepted": true,
+        "reference_rms_counts": 95808,
+        "adaptive_rms_counts": 33881
+      }
+    },
+    {
+      "label": "Phase-ramped start 3",
+      "run": "e0ff035ce7904990b0bcf4ebd792ccfc",
+      "boot_group": "boot_3",
+      "path": "evidence/2026-11-24/e0ff035ce7904990b0bcf4ebd792ccfc.csv",
+      "sha256": "a5f1f783560e49736b95e5b93d04d059db96abfa970b1019567518f3ff066647",
+      "source": {
+        "archive": "TIM035_smooth60_pair_e0ff035ce7904990b0bcf4ebd792ccfc.zip",
+        "git_blob": "32a1cd01cdbc8f54666e4e2f79d68f0fc267e614",
+        "archive_sha256": "8c5925b6de7f4acd18a59b234a2602ce8d33617f69a8d13f45ca511afd50ed29",
+        "target_member": "target.zip",
+        "target_sha256": "6fa3b3a4553e31e2800e27cb9640d33307ac01d44b418018a2036085d41aa623",
+        "member_sha256": {
+          "reference.csv": "9301eb4bbfe6fd3e316919f83f215a66f1dbd847ae9ea73bd7b9523180d284e4",
+          "active.csv": "a9cd252de50f6202929fc0b26687ad2792e2ae76ebba8c928f334ce9544c7276"
+        }
+      },
+      "expected": {
+        "attenuation_db": 10.137523962254031,
+        "rms_reduction_percent": 68.87,
+        "qualifying_seconds": 60,
+        "minimum_second_db": 8.222,
+        "minimum_second_start": 7,
+        "accepted": true,
+        "reference_rms_counts": 102659,
+        "adaptive_rms_counts": 31954
+      }
+    }
+  ]
+}

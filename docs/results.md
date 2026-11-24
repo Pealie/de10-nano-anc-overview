@@ -1,5 +1,23 @@
 # Experimental results and limitations
 
+## Phase-ramped source, 24 November 2026
+
+Three separately started 60-second pairs ran on three distinct boots of the same DE10-Nano. The strongest minute attenuated the tracked external tone near 200 Hz by **10.137524 dB** at the RIGHT microphone. Its weakest second, 7–8 s into the scored minute, still cleared 8 dB. The arithmetic mean of the three whole-minute scores was 8.91 dB. Every one of the 180 scored seconds exceeded 3 dB.
+
+| Start | Source-only RMS (counts) | Adaptive residual RMS (counts) | Overall attenuation | RMS reduction | Weakest one-second interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 1 | 106,992 | 44,859 | 7.550075 dB | 58.07% | 5.572 dB at 56–57 s |
+| 2 | 95,808 | 33,881 | 9.028971 dB | 64.64% | 6.905 dB at 0–1 s |
+| 3 | 102,659 | 31,954 | 10.137524 dB | 68.87% | 8.222 dB at 7–8 s |
+
+![One-second RIGHT-microphone attenuation on three boots and paired source-only and residual RMS levels](images/tim035-three-boots.png)
+
+Each reference minute used zero secondary command and preceded its adaptive minute. Both played the same recorded programme. At source times 18 and 48 s, phase changed by +30° and −30° respectively over 20 ms. The built-in laptop speakers were at 80%, the secondary loudspeaker was 5 cm from RIGHT, and the controller correction rate was 0.32 with a gain ceiling of 20. Each minute score uses the summed powers of 3,000 consecutive 20 ms windows. The acceptance rule remained ≥3 dB overall and ≥54/60 qualifying seconds per start.
+
+The new best exceeded the earlier 6.146639 dB abrupt-source result by 3.991 dB. The adaptive residual was 3.308 dB lower and the source-only reference was 0.683 dB stronger. The source transitions and microphone ground repair changed between series. Within each series, reference playback always came first. These measurements establish the attenuation achieved under each protocol and leave the contribution of each change unresolved.
+
+An earlier attempt at the second ramped start stopped during the amplifier-off peak check, before either scored minute. It contributed no score. The [three public measurement extracts and replay instructions](../evidence/README.md) reproduce the table. Boot identity, controller checks and the preflight stop come from the development record.
+
 ## Matched-pair results, 21 November 2026
 
 Three separately started 60-second experiments met the sustained target at the marked RIGHT microphone. Each adaptive minute was scored against a dedicated source-only minute with zero secondary command and the same programmed changes in amplitude, phase and frequency near 200 Hz.
@@ -100,6 +118,6 @@ Both experiments met the control-drift condition and missed the two attenuation 
 
 The subsequent 0.32-rate / 128-count controller revision passed its reported offline cases, but its physical attempt stopped during preflight before the amplifier-ON prompt or playback. The exact timeout cause was not established by the returned archive. That revision has no new physical attenuation result.
 
-The three scored 21 November starts form a later campaign with a matched source-only reference for each adaptive minute.
+The 21 and 24 November campaigns each used a matched source-only reference for every adaptive minute.
 
 [Replay these measurements](../evidence/README.md) · [Provenance](provenance.md)

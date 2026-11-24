@@ -59,6 +59,8 @@ The 4–5 November session record gives microphone spacing of approximately seve
 
 The source-to-microphone distance difference does not establish a usable feedforward reference: the demonstrated controller is RIGHT feedback. Acoustic transfer paths, background tones, secondary-speaker authority and controller limits can affect the residual. Each 4–5 November setting was tested once, with a different background.
 
-On 21 November, the operator recorded a 5 cm distance from the secondary loudspeaker to the marked RIGHT microphone and a digital gain ceiling of 20. Each of three adaptive minutes had its own source-only reference minute. The third pair followed a board reboot. [Matched-pair results](results.md)
+On 21 November, the operator recorded a 5 cm distance from the secondary loudspeaker to the marked RIGHT microphone and a digital gain ceiling of 20. Each of three adaptive minutes had its own source-only reference minute. The third pair followed a board reboot.
+
+The 24 November series retained the 5 cm spacing and 20-count gain ceiling. Each pair used the same laptop playback waveform for both minutes. The source phase changed over 20 ms at programme times 18 and 48 s. Each of the three completed pairs ran on a distinct board boot. [Matched-pair results](results.md)
 
 [Measured results](results.md) · [Evidence and replay](../evidence/README.md)

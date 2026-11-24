@@ -1,5 +1,17 @@
 # Selected evidence and offline replay
 
+## 24 November 2026 · phase-ramped source on three boots
+
+From the repository root, run `python tools/verify_tim035.py` with Python 3.10 or later. It replays all six matched pairs from 21 and 24 November using the standard library.
+
+| 24 November pair | Selected RIGHT I/Q windows | Expected whole-minute attenuation |
+| --- | --- | ---: |
+| Start 1 | [97648726df5a4cab92dfad5b05a33752.csv](2026-11-24/97648726df5a4cab92dfad5b05a33752.csv) | 7.550075 dB |
+| Start 2 | [719b58fdf382469db978c6a82414585d.csv](2026-11-24/719b58fdf382469db978c6a82414585d.csv) | 9.028971 dB |
+| Start 3 | [e0ff035ce7904990b0bcf4ebd792ccfc.csv](2026-11-24/e0ff035ce7904990b0bcf4ebd792ccfc.csv) | 10.137524 dB |
+
+Each CSV contains 3,000 ordered pairs of scored RIGHT I/Q windows. The [dated manifest](2026-11-24/manifest.json) records the export and source identities. RMS levels are measured in digital counts. The [results](../docs/results.md) give the calculation, one-second traces and limits on interpretation.
+
 ## 21 November 2026 · matched source-only and adaptive minutes
 
 | Pair | Selected RIGHT I/Q windows | Board boot |
@@ -8,7 +20,7 @@
 | Repeat | [4fff25db6f384751b9da13c8f4964387.csv](2026-11-21/4fff25db6f384751b9da13c8f4964387.csv) | Original |
 | After reboot | [e42f6d3387874e65865781801ea7e9a5.csv](2026-11-21/e42f6d3387874e65865781801ea7e9a5.csv) | Fresh |
 
-From the repository root, run `python tools/verify_tim035.py` with Python 3.10 or later. The verifier checks the three CSV hashes and the 3,000 ordered pairs of 20 ms windows per run. It scores the full minute and all 60 corresponding one-second intervals, then checks the RMS reduction, qualifying count, weakest interval and verdict against the [matched-pair manifest](2026-11-21/manifest.json). It uses only the Python standard library.
+For the 21 November series the same verifier checks the three CSV hashes and the 3,000 ordered pairs of 20 ms windows per run. It scores the full minute and all 60 corresponding one-second intervals, then checks the RMS reduction, qualifying count, weakest interval and verdict against the [matched-pair manifest](2026-11-21/manifest.json). It uses only the Python standard library.
 
 Each CSV contains a zero-based window index and signed integer RIGHT I/Q for the source-only and adaptive minutes. The two columns for each treatment come from `W,ACTIVE` rows in its own source trace. In the reference trace this label denotes the zero-command measurement period. Hardware identity, command timing and boot grouping are documented in the [source provenance](../docs/provenance.md).
 

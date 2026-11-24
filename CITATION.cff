@@ -5,12 +5,12 @@ type: software
 authors:
   - family-names: Thomson
     given-names: Neil
-version: "2026.11.22"
-date-released: 2026-11-22
+version: "2026.11.24"
+date-released: 2026-11-24
 license: GPL-3.0-only
 repository-code: "https://github.com/Pealie/de10-nano-anc-overview"
 url: "https://github.com/Pealie/de10-nano-anc-overview"
-abstract: "Three 60-second matched pairs across two board boots achieved 5.64, 6.15 and 5.70 dB attenuation of a tracked tone near 200 Hz at one marked RIGHT microphone position. All 180 one-second intervals exceeded 3 dB. The public evidence also preserves the two earlier experiments from 4–5 November 2026 and their original scores."
+abstract: "On 24 November 2026, three 60-second matched pairs on three board boots achieved 7.55, 9.03 and 10.14 dB attenuation of the tracked external tone near 200 Hz at the marked RIGHT microphone. All 180 one-second intervals exceeded 3 dB under the phase-ramped source programme. Public I/Q extracts support offline numerical replay. The overview preserves the 21 November abrupt-source benchmark and the 4–5 November experiments."
 keywords:
   - active noise cancellation
   - FPGA

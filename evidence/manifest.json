@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
-  "overview_date": "2026-11-22",
+  "overview_date": "2026-11-24",
   "experimental_closeout_date": "2026-11-05",
   "timezone": "Europe/London",
-  "scope": "The top-level experimental closeout, source milestone, calibration, acceptance criteria and runs describe the 5 November experiments. The matched-pair manifest covers 21 November. Published file hashes cover both series.",
+  "scope": "The top-level experimental closeout, source milestone, calibration, acceptance criteria and runs describe the 4\u20135 November experiments. Dated manifests cover the 21 November abrupt-source and 24 November phase-ramped matched pairs. Published hashes cover all three series.",
   "matched_pair_manifest": "evidence/2026-11-21/manifest.json",
+  "matched_pair_manifests": [
+    "evidence/2026-11-21/manifest.json",
+    "evidence/2026-11-24/manifest.json"
+  ],
   "source_repository": "Pealie/active_noise_cancellation",
   "source_repository_visibility_at_export": "private",
   "research_milestone_commit": "c14634648633aa681fce9d8195fe0e75c904c58c",
@@ -84,17 +88,18 @@
   },
   "published_file_sha256": {
     ".gitattributes": "6f02581e7cf5b2eff82553767a1c8a320cc7691648791e621906e123b0b89e48",
-    ".github/workflows/verify-evidence.yml": "a2d76a948d30a903daccd591d880ffc4e54d843a269d612e9ac1c6ac719ab8f3",
+    ".github/workflows/verify-evidence.yml": "cc50256599547ec5e59a9e415574b8c6a9db8aa6589f45618963523a0eccee4b",
     ".gitignore": "f2c7e864eb342698716cca386b8691f82ffd7b6631f61cbe0e48a782c6d97048",
-    "CITATION.cff": "1b213655705c1fec16d4ef7da93aa0af0fd439337ebf470b17bb007192bde135",
+    "CITATION.cff": "25e7a782e1ab6fdd18f1323d9c04abdd4bb596bd1405f598e6bb348a149611eb",
     "CONTRIBUTING.md": "d5b130d361467549f5f5bd4e9d63e374619f6d9095e6d5311825b904cf1b1532",
     "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
-    "NOTICE.md": "64a773e901f44bebe539172e797377a1ef180d55e154227a590d89ed52aa0a9e",
-    "README.md": "400664ae114fabf38d546f9c94415fca525d770a7a67d66b3917a6cdbd77ce8d",
+    "NOTICE.md": "c7b8e7f4e817e633dd353dc0fa3c33b3cb3cca8dedcbe7814c74f418177708ba",
+    "README.md": "b9150c99be66049fe6b16e315ccbcfeefa470b5958496a087df57d227cf02596",
     "docs/images/anc-bench-2026-11-07.jpg": "5a48045dc9a27bbabf95905943b6dd3775ee2b9e699a86501cba270fcaf01832",
-    "docs/provenance.md": "e354c10d141769c374f8f0dad3e5d34b6effdfdc441fb5d7fbcda9ee108e6756",
-    "docs/results.md": "2b96727965363e4f7b757f7459611181954238b8a52b4ea529af0ca0b15054da",
-    "docs/system-overview.md": "8dedc1a18787446972ee6ed0a0b62f3252f2876b8ad73a302a78d25138f956d1",
+    "docs/images/tim035-three-boots.png": "1a9b235edbe712989d38eb18d1d5d9d129345ae7aebcc4ae9e0aa8150e4eef19",
+    "docs/provenance.md": "6d9e01ad0d99b596dd241d6d88c6f15a946a67a180d5ad4737ca07de480ee20c",
+    "docs/results.md": "c4d73447350ddeb76c3533502ceda66beaef442d13ec0d05b7f8c4394afeb2ac",
+    "docs/system-overview.md": "a8025db2561087a5942b759f0dd4ab5ae1787d3444c4ffa1a4c3ae93ca2d431f",
     "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/review.json": "ecf35bd9698b82565d17d5795892a130c0b8f7b8d11be192ca180623d5ffb640",
     "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage10.csv": "3ae95da4aa32d92059fd5def0ffbb66db53ae67e9b6a11f53b28e540b71e3568",
     "evidence/2026-11-05/3b5ff096e5a4471eb1f530e561d75fdf/stage60.csv": "07eb89b2fe4c819ee6a10ee3bccd8445ede69503d76f11eb5f7c28b6027a952b",
@@ -105,8 +110,12 @@
     "evidence/2026-11-21/4fff25db6f384751b9da13c8f4964387.csv": "3707ef28ef3896e927a2c34e7b3fcfc2cdb40dd23a8bc7c51e99ac854022cef0",
     "evidence/2026-11-21/e42f6d3387874e65865781801ea7e9a5.csv": "85420848e3aeda241eccb50279c6784febe35f09834117817781790965bb5077",
     "evidence/2026-11-21/manifest.json": "b17156019a26318666afd1199aaa1ee47ef294484d2a3b90d9d7e173dd8975bb",
-    "evidence/README.md": "01408856da1360c2ea6dacfa691b9f4f6175778254d1848d9b1296542e5dd33e",
+    "evidence/2026-11-24/719b58fdf382469db978c6a82414585d.csv": "d8b99d325d369010ef57336d9877973c9adc5f68dab3e5625e8add0dee1d9781",
+    "evidence/2026-11-24/97648726df5a4cab92dfad5b05a33752.csv": "abc8823eebfd8a8c3824c61b4be074d64f9acc58b75e4174004a3b2612f2f771",
+    "evidence/2026-11-24/e0ff035ce7904990b0bcf4ebd792ccfc.csv": "a5f1f783560e49736b95e5b93d04d059db96abfa970b1019567518f3ff066647",
+    "evidence/2026-11-24/manifest.json": "f8f889d0be3f7aced43fe2239296813eed12a975e3cb74bdb2ea0f6e9e8d9f57",
+    "evidence/README.md": "1050106801a2ee9bff145338e6ddd8f289ee9ae2b4a6853412a2cb0a25af6134",
     "tools/verify_results.py": "1d233322a9ec9aa7e06483e8fdfef8a8e8893243e75bcb9ad400bbc4573065c7",
-    "tools/verify_tim035.py": "b1eed970f3e0f43caf72532361b00b131fcc0023f9657ec56f4d238fc537b642"
+    "tools/verify_tim035.py": "174b51bd7caa964ba1594b4e2bd7b74357aeec6a8698027a2fdefbf9e7388420"
   }
 }

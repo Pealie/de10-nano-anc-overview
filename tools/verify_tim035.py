@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-only
-"""Recompute the 21 November matched-pair attenuation from published RIGHT I/Q."""
+"""Recompute the TIM035 matched-pair attenuation from published RIGHT I/Q."""
 
 import csv
 import hashlib
@@ -11,19 +11,25 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EVIDENCE = Path("evidence/2026-11-21")
-RUN_IDS = (
-    "2a3d336d810f4917b68e6c830faac093",
-    "4fff25db6f384751b9da13c8f4964387",
-    "e42f6d3387874e65865781801ea7e9a5",
-)
+SERIES = {
+    "2026-11-21": (
+        "2a3d336d810f4917b68e6c830faac093",
+        "4fff25db6f384751b9da13c8f4964387",
+        "e42f6d3387874e65865781801ea7e9a5",
+    ),
+    "2026-11-24": (
+        "97648726df5a4cab92dfad5b05a33752",
+        "719b58fdf382469db978c6a82414585d",
+        "e0ff035ce7904990b0bcf4ebd792ccfc",
+    ),
+}
 SECONDS = 60
 WINDOWS_PER_SECOND = 50
 THRESHOLD_DB = 3.0
 REQUIRED_SECONDS = 54
 
 
-def score(raw):
+def score(raw, *, include_rms_counts=False):
     rows = csv.reader(raw.decode("ascii").splitlines(), strict=True)
     if next(rows, None) != ["window", "ref_i", "ref_q", "adaptive_i", "adaptive_q"]:
         raise ValueError("unexpected CSV header")
@@ -50,7 +56,7 @@ def score(raw):
     seconds_db = [10 * math.log10(r / a) for r, a in zip(reference, adaptive)]
     qualifying = sum(db >= THRESHOLD_DB for db in seconds_db)
     minimum = min(seconds_db)
-    return {
+    result = {
         "attenuation_db": overall,
         "rms_reduction_percent": round(100 * (1 - math.sqrt(adaptive_total / reference_total)), 2),
         "qualifying_seconds": qualifying,
@@ -59,9 +65,17 @@ def score(raw):
         "accepted": overall >= THRESHOLD_DB and qualifying >= REQUIRED_SECONDS,
     }
 
+    if include_rms_counts:
+        result["reference_rms_counts"] = round(math.sqrt(reference_total / count))
+        result["adaptive_rms_counts"] = round(math.sqrt(adaptive_total / count))
+    return result
 
-def verify():
-    manifest = json.loads((ROOT / EVIDENCE / "manifest.json").read_text(encoding="utf-8"))
+
+def verify_series(date, run_ids):
+    evidence = Path("evidence") / date
+    manifest = json.loads((ROOT / evidence / "manifest.json").read_text(encoding="utf-8"))
+    if manifest["date"] != date:
+        raise ValueError(f"unexpected date in {evidence}/manifest.json")
     if manifest["acceptance"] != {
         "attenuation_db_min": THRESHOLD_DB,
         "seconds_meeting_3db_min": REQUIRED_SECONDS,
@@ -69,18 +83,18 @@ def verify():
         "windows_per_second": WINDOWS_PER_SECOND,
     }:
         raise ValueError("manifest differs from the matched-pair acceptance criteria")
-    if tuple(run["run"] for run in manifest["runs"]) != RUN_IDS:
+    if tuple(run["run"] for run in manifest["runs"]) != run_ids:
         raise ValueError("manifest differs from the three archived run identities")
 
     for run in manifest["runs"]:
-        path = EVIDENCE / (run["run"] + ".csv")
+        path = evidence / (run["run"] + ".csv")
         if run["path"] != path.as_posix():
             raise ValueError(f"unexpected measurement path for {run['run']}")
         raw = (ROOT / path).read_bytes()
         if hashlib.sha256(raw).hexdigest() != run["sha256"]:
             raise ValueError(f"SHA-256 mismatch for {path}")
 
-        result = score(raw)
+        result = score(raw, include_rms_counts=(date == "2026-11-24"))
         expected = run["expected"]
         for name, value in result.items():
             if name == "attenuation_db":
@@ -92,11 +106,16 @@ def verify():
 
         start = result["minimum_second_start"]
         verdict = "PASS" if result["accepted"] else "FAIL"
-        print(f"{run['label']}: {result['attenuation_db']:.6f} dB, "
+        print(f"{date} {run['label']}: {result['attenuation_db']:.6f} dB, "
               f"{result['rms_reduction_percent']:.2f}% RMS reduction, "
               f"{result['qualifying_seconds']}/{SECONDS} qualifying intervals, "
               f"minimum {result['minimum_second_db']:.3f} dB at {start}-{start + 1} s, "
               f"acceptance {verdict}")
+
+
+def verify():
+    for date, run_ids in SERIES.items():
+        verify_series(date, run_ids)
 
 
 if __name__ == "__main__":
